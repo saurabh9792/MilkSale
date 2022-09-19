@@ -1,0 +1,590 @@
+﻿
+<!DOCTYPE html>
+<html lang="en-US" class="scheme_original">
+<head>
+    <title>@ViewBag.Title</title>
+    <meta name='robots' content='noindex, nofollow'>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="format-detection" content="telephone=no">
+    <link rel="profile" href="//gmpg.org/xfn/11">
+    <link rel="pingback" href="https://dairy-farm.ancorathemes.com/xmlrpc.php">
+    <link rel='dns-prefetch' href='//fonts.googleapis.com'>
+    <link rel='dns-prefetch' href='//s.w.org'>
+    <link rel="alternate" type="application/rss+xml" title="Dairy Farm &raquo; Feed" href="feed/index.htm">
+    <link rel="alternate" type="application/rss+xml" title="Dairy Farm &raquo; Comments Feed" href="comments/feed/index.htm">
+    <link href="~/Content/css/CustomStyle.css" rel="stylesheet" />
+    <link href="~/Content/wp-content/plugins/trx_demo-master/css/font-icons/css/trx_demo_icons.css" rel="stylesheet" />
+    <link rel='stylesheet' id='trx_demo_icons_animation-css' href='~/Content/wp-content/plugins/trx_demo-master/css/font-icons/css/animation.css' type='text/css' media='all'>
+    <link rel='stylesheet' id='wp-block-library-css' href='~/Content/wp-includes/css/dist/block-library/style.min.css?ver=5.9.2' type='text/css' media='all'>
+    <link rel='stylesheet' id='wc-blocks-vendors-style-css' href='~/Content/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-vendors-style.css?ver=7.2.2' type='text/css' media='all'>
+    <link rel='stylesheet' id='wc-blocks-style-css' href='~/Content/wp-content/plugins/woocommerce/packages/woocommerce-blocks/build/wc-blocks-style.css?ver=7.2.2' type='text/css' media='all'>
+
+    <link rel='stylesheet' id='contact-form-7-css' href='~/Content/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.5.6' type='text/css' media='all'>
+    <link rel='stylesheet' id='cooked-essentials-css' href='~/Content/wp-content/plugins/cooked/assets/admin/css/essentials.min.css?ver=1.7.11' type='text/css' media='all'>
+    <link rel='stylesheet' id='cooked-icons-css' href='~/Content/wp-content/plugins/cooked/assets/css/icons.min.css?ver=1.7.11' type='text/css' media='all'>
+    <link rel='stylesheet' id='cooked-styling-css' href='~/Content/wp-content/plugins/cooked/assets/css/style.min.css?ver=1.7.11' type='text/css' media='all'>
+
+    <link rel='stylesheet' id='essential-grid-plugin-settings-css' href='~/Content/wp-content/plugins/essential-grid/public/assets/css/settings.css?ver=3.0.11' type='text/css' media='all'>
+    <link rel='stylesheet' id='tp-fontello-css' href='~/Content/wp-content/plugins/essential-grid/public/assets/font/fontello/css/fontello.css?ver=3.0.11' type='text/css' media='all'>
+    <link rel='stylesheet' id='trx_demo_panels-css' href='~/Content/wp-content/plugins/trx_demo-master/css/trx_demo_panels.css' type='text/css' media='all'>
+    <link rel='stylesheet' id='woocommerce-smallscreen-css' href='~/Content/wp-content/plugins/woocommerce/assets/css/woocommerce-smallscreen.css?ver=6.4.1' type='text/css' media='only screen and (max-width: 768px)'>
+    <link rel='stylesheet' id='woocommerce-general-css' href='~/Content/wp-content/plugins/woocommerce/assets/css/woocommerce.css?ver=6.4.1' type='text/css' media='all'>
+
+    <link rel='stylesheet' id='font-google-fonts-style-css' href='css?family=Libre+Baskerville:700|Oswald:300,300italic,400,400italic,700,700italic|Average&#038;subset=latin,latin-ext' type='text/css' media='all'>
+    <link rel='stylesheet' id='fontello-style-css' href='~/Content/wp-content/themes/dairy-farm/css/fontello/css/fontello.css' type='text/css' media='all'>
+    <link rel='stylesheet' id='dairy-farm-main-style-css' href='~/Content/wp-content/themes/dairy-farm/style.css' type='text/css' media='all'>
+    <link rel='stylesheet' id='dairy-farm-animation-style-css' href='~/Content/wp-content/themes/dairy-farm/fw/css/core.animation.css' type='text/css' media='all'>
+    <link rel='stylesheet' id='dairy-farm-shortcodes-style-css' href='~/Content/wp-content/plugins/trx_utils/shortcodes/theme.shortcodes.css' type='text/css' media='all'>
+    <link rel='stylesheet' id='dairy-farm-theme-style-css' href='~/Content/wp-content/themes/dairy-farm/css/theme.css' type='text/css' media='all'>
+
+    <link rel='stylesheet' id='dairy-farm-woocommerce-style-css' href='~/Content/wp-content/themes/dairy-farm/css/plugin.woocommerce.css' type='text/css' media='all'>
+    <link rel='stylesheet' id='dairy-farm-responsive-style-css' href='~/Content/wp-content/themes/dairy-farm/css/responsive.css' type='text/css' media='all'>
+    <link rel='stylesheet' id='mediaelement-css' href='~/Content/wp-includes/js/mediaelement/mediaelementplayer-legacy.min.css?ver=4.2.16' type='text/css' media='all'>
+    <link rel='stylesheet' id='wp-mediaelement-css' href='~/Content/wp-includes/js/mediaelement/wp-mediaelement.min.css?ver=5.9.2' type='text/css' media='all'>
+    <link rel='stylesheet' id='js_composer_front-css' href='~/Content/wp-content/plugins/js_composer/assets/css/js_composer.min.css?ver=6.8.0' type='text/css' media='all'>
+    <link rel='stylesheet' id='wpgdprc-front-css-css' href='~/Content/wp-content/plugins/wp-gdpr-compliance/Assets/css/front.css?ver=1648822426' type='text/css' media='all'>
+
+    <script type='text/javascript' src='~/Content/wp-includes/js/jquery/jquery.min.js?ver=3.6.0' id='jquery-core-js'></script>
+    <script type='text/javascript' src='~/Content/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2' id='jquery-migrate-js'></script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/revslider/public/assets/js/rbtools.min.js?ver=6.5.11' async="" id='tp-tools-js'></script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/revslider/public/assets/js/rs6.min.js?ver=6.5.11' async="" id='revmin-js'></script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/woocommerce/assets/js/jquery-blockui/jquery.blockUI.min.js?ver=2.7.0-wc.6.4.1' id='jquery-blockui-js'></script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/woocommerce/assets/js/frontend/add-to-cart.min.js?ver=6.4.1' id='wc-add-to-cart-js'></script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/js_composer/assets/js/vendors/woocommerce-add-to-cart.js?ver=6.8.0' id='vc_woocommerce-add-to-cart-js-js'></script>
+    <script type='text/javascript' src='~/Content/wp-content/themes/dairy-farm/fw/js/photostack/modernizr.min.js' id='modernizr-js'></script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/wp-gdpr-compliance/Assets/js/front.min.js?ver=1648822426' id='wpgdprc-front-js-js'></script>
+    <link rel="https://api.w.org/" href="Content/wp-json/index.htm">
+    <link rel="alternate" type="application/json" href="Content/wp-json/wp/v2/pages/129">
+    <link rel="EditURI" type="application/rsd+xml" title="RSD" href="xmlrpc.php?rsd">
+    <link rel="wlwmanifest" type="application/wlwmanifest+xml" href="~/Content/wp-includes/wlwmanifest.xml">
+    <meta name="generator" content="WordPress 5.9.2">
+    <meta name="generator" content="WooCommerce 6.4.1">
+    <link rel="canonical" href="index.htm">
+    <link rel='shortlink' href='index.htm'>
+    <link rel="alternate" type="application/json+oembed" href="wp-json/oembed/1.0/embed?url=https%3A%2F%2Fdairy-farm.ancorathemes.com%2F">
+    <link rel="alternate" type="text/xml+oembed" href="wp-json/oembed/1.0/embed-1?url=https%3A%2F%2Fdairy-farm.ancorathemes.com%2F&#038;format=xml">
+
+    <meta name="generator" content="Powered by WPBakery Page Builder - drag and drop page builder for WordPress.">
+    <meta name="generator" content="Powered by Slider Revolution 6.5.11 - responsive, Mobile-Friendly Slider Plugin for WordPress with comfortable drag and drop interface.">
+    <link rel="icon" href="~/Content/wp-content/uploads/2016/09/footer-logo.png" sizes="32x32">
+    <link rel="icon" href="~/Content/wp-content/uploads/2016/09/footer-logo.png" sizes="192x192">
+    <link rel="apple-touch-icon" href="~/Content/wp-content/uploads/2016/09/footer-logo.png">
+    <meta name="msapplication-TileImage" content="https://dairy-farm.ancorathemes.com/wp-content/uploads/2016/09/footer-logo.png">
+    <script src="~/Content/js/Customtheme.js"></script>
+</head>
+<body class="page-template-default page page-id-110 theme-dairy-farm ua_chrome woocommerce-no-js dairy_farm_body body_style_wide body_filled article_style_stretch layout_single-standard template_single-standard scheme_original top_panel_show top_panel_above sidebar_hide sidebar_outer_hide wpb-js-composer js-comp-ver-6.8.0 vc_responsive">
+
+    <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-dark-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0.49803921568627"></fefuncr><fefuncg type="table" tablevalues="0 0.49803921568627"></fefuncg><fefuncb type="table" tablevalues="0 0.49803921568627"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-grayscale"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.54901960784314 0.98823529411765"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.71764705882353 0.25490196078431"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-red"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 1"></fefuncr><fefuncg type="table" tablevalues="0 0.27843137254902"></fefuncg><fefuncb type="table" tablevalues="0.5921568627451 0.27843137254902"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-midnight"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0 0"></fefuncr><fefuncg type="table" tablevalues="0 0.64705882352941"></fefuncg><fefuncb type="table" tablevalues="0 1"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-magenta-yellow"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.78039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.94901960784314"></fefuncg><fefuncb type="table" tablevalues="0.35294117647059 0.47058823529412"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-purple-green"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.65098039215686 0.40392156862745"></fefuncr><fefuncg type="table" tablevalues="0 1"></fefuncg><fefuncb type="table" tablevalues="0.44705882352941 0.4"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg><svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 0 0" width="0" height="0" focusable="false" role="none" style="visibility: hidden; position: absolute; left: -9999px; overflow: hidden;"><defs><filter id="wp-duotone-blue-orange"><fecolormatrix color-interpolation-filters="sRGB" type="matrix" values=" .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 .299 .587 .114 0 0 "></fecolormatrix><fecomponenttransfer color-interpolation-filters="sRGB"><fefuncr type="table" tablevalues="0.098039215686275 1"></fefuncr><fefuncg type="table" tablevalues="0 0.66274509803922"></fefuncg><fefuncb type="table" tablevalues="0.84705882352941 0.41960784313725"></fefuncb><fefunca type="table" tablevalues="1 1"></fefunca></fecomponenttransfer><fecomposite in2="SourceGraphic" operator="in"></fecomposite></filter></defs></svg>
+    <a id="toc_home" class="sc_anchor" title="Home" data-description="&lt;i&gt;Return to Home&lt;/i&gt; - &lt;br&gt;navigate to home page of the site" data-icon="icon-home" data-url="https://dairy-farm.ancorathemes.com/" data-separator="yes"></a><a id="toc_top" class="sc_anchor" title="To Top" data-description="&lt;i&gt;Back to top&lt;/i&gt; - &lt;br&gt;scroll to top of the page" data-icon="icon-double-up" data-url="" data-separator="yes"></a>
+
+    <div class="body_wrap">
+        <div class="page_wrap">
+            <div class="top_panel_fixed_wrap"></div>
+            <!--header-->
+            @Html.Action("HeaderPageContent", "Home", new { area = "" })
+            <!--header-->
+
+            @*<header class="top_panel_wrap top_panel_style_1 scheme_original">
+            <div class="top_panel_wrap_inner top_panel_inner_style_1 top_panel_position_above">
+                <div class="top_panel_top">
+                    <div class="content_wrap clearfix">
+                        <div class="top_panel_top_contact_area icons icon-phone-1">
+                            <a href="tel:1(800)-456-789">
+                                1(800)-456-789
+                            </a>
+                        </div>
+                        <div class="top_panel_top_open_hours icons icon-clock-1">Mn-Fr: 8am - 8pm, St-Sn: 8am - 4pm</div>
+                        <div class="top_panel_top_user_area">
+                            <div class="top_panel_top_socials">
+                                <div class="sc_socials sc_socials_type_icons sc_socials_shape_square sc_socials_size_tiny"><div class="sc_socials_item"><a href="https://twitter.com/themes_ancora" target="_blank" class="social_icons social_twitter"><span class="icon-twitter"></span></a></div><div class="sc_socials_item"><a href="https://www.facebook.com/AncoraThemes/" target="_blank" class="social_icons social_facebook"><span class="icon-facebook"></span></a></div><div class="sc_socials_item"><a href="https://www.linkedin.com/" target="_blank" class="social_icons social_linkedin"><span class="icon-linkedin"></span></a></div></div>
+                            </div>
+                            <ul id="menu_user" class="menu_user_nav">
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="top_panel_middle">
+                    <div class="content_wrap">
+                        <div class="columns_wrap columns_fluid">
+                            <div class="column-4_5 contact_logo">
+                                <div class="logo">
+                                    <a href="Home/HomePage">
+                                        <img src="~/Content/logo/logo.jpg" class="logo_main" alt="logo" width="239" height="59" />
+                                    </a>
+                                </div>
+                            </div><div class="column-1_5 contact_field contact_cart">
+                                <a href="#" class="top_panel_cart_button" data-items="0" data-summa="&#036;0.00">
+                                    <span class="contact_icon icon-1"></span>
+                                    <span class="contact_label contact_cart_label">cart:</span>
+                                    <span class="contact_cart_totals">
+                                        <span class="cart_items">0 Items</span><span class="cart_summa">&#36;0.00</span>
+                                    </span>
+                                </a>
+                                <ul class="widget_area sidebar_cart sidebar">
+                                    <li>
+                                        <div class="widget woocommerce widget_shopping_cart"><div class="hide_cart_widget_if_empty"><div class="widget_shopping_cart_content"></div></div></div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="top_panel_bottom">
+                    <div class="content_wrap clearfix">
+                        <nav class="menu_main_nav_area menu_hover_fade">
+                            <ul id="menu_main" class="menu_main_nav">
+                                <li id="menu-item-38" class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-38">
+                                    <a href="@Url.Action("HomePage","Home")">
+                                        <span>Home</span>
+                                    </a>
+                                </li>
+                                <li id="menu-item-39" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-39">
+                                    <a href="@Url.Action("AboutUs","Home")">
+                                        <span>About Us</span>
+                                    </a>
+                                </li>
+                                <li id="menu-item-184" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-184">
+                                    <a href="@Url.Action("Farm","Home")"><span>Farm</span></a>
+                                </li>
+                                <li id="menu-item-37" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37">
+                                    <a href="@Url.Action("Product","Home")"><span>Products</span></a>
+                                </li>
+                                <li id="menu-item-112" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-112">
+                                    <a href="@Url.Action("ContactUs","Home")">
+                                        <span>Contacts</span>
+                                    </a>
+                                </li>
+                                <li id="menu-item-168" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-168">
+                                    <a href="@Url.Action("Login","Login")">
+                                        <span>Login</span>
+                                    </a>
+                                </li>
+                                <li id="menu-item-168" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-168">
+                                    <a href="@Url.Action("Dashboard", "Admin", new { Area = "Admin" })"><span>Admin</span></a>
+                                </li>
+
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <div class="header_mobile">
+            <div class="content_wrap">
+                <div class="menu_button icon-menu"></div>
+                <div class="logo">
+                    <a href="../index.htm"><img src="~/Content/logo/logo.jpg" class="logo_main" alt="logo" width="239" height="59"></a>
+                </div>
+                <div class="menu_main_cart top_panel_icon">
+                    <a href="#" class="top_panel_cart_button" data-items="0" data-summa="&#036;0.00">
+                        <span class="contact_icon icon-1"></span>
+                        <span class="contact_label contact_cart_label">cart:</span>
+                        <span class="contact_cart_totals">
+                            <span class="cart_items">0 Items</span><span class="cart_summa">&#36;0.00</span>
+                        </span>
+                    </a>
+                    <ul class="widget_area sidebar_cart sidebar">
+                        <li>
+                            <div class="widget woocommerce widget_shopping_cart"><div class="hide_cart_widget_if_empty"><div class="widget_shopping_cart_content"></div></div></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="side_wrap">
+                <div class="close">Close</div>
+                <div class="panel_top">
+                    <nav class="menu_main_nav_area">
+                        <ul id="menu_mobile" class="menu_main_nav">
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-38">
+                                <a href="#"><span>Home</span></a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home menu-item-181"><a href="../index.htm"><span>Homepage 1</span></a></li>
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-179"><a href="../homepage-2/index.htm"><span>Homepage 2</span></a></li>
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-180"><a href="../homepage-3/index.htm"><span>Homepage 3</span></a></li>
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom current-menu-ancestor current-menu-parent menu-item-has-children menu-item-39">
+                                <a href="#"><span>About us</span></a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-170 current_page_item menu-item-183"><a href="index.htm" aria-current="page"><span>About 1</span></a></li>
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-182"><a href="../about-2/index.htm"><span>About 2</span></a></li>
+                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-329">
+                                        <a href="#"><span>Features</span></a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-74"><a href="../shortcodes/index.htm"><span>Shortcodes</span></a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-36"><a href="../typography/index.htm"><span>Typography</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-185">
+                                        <a href="#"><span>Tools</span></a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-632"><a href="../privacy-policy/index.htm"><span>Privacy Policy</span></a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-815"><a href="../service-plus/index.htm"><span>Service plus</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-330">
+                                        <a href="#"><span>Gallery</span></a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-331"><a href="../gallery-cobbles/index.htm"><span>Gallery Cobbles</span></a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-333"><a href="../gallery-grid/index.htm"><span>Gallery Grid</span></a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-332"><a href="../gallery-masonry/index.htm"><span>Gallery Masonry</span></a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-184"><a href="../farm/index.htm"><span>Farm</span></a></li>
+                            <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-41">
+                                <a href="#"><span>Blog</span></a>
+                                <ul class="sub-menu">
+                                    <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-126"><a href="../classic/index.htm"><span>Classic</span></a></li>
+                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-127">
+                                        <a href="#"><span>Masonry</span></a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-136"><a href="../masonry-2-columns/index.htm"><span>Masonry 2 columns</span></a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-144"><a href="../masonry-3-columns/index.htm"><span>Masonry 3 columns</span></a></li>
+                                        </ul>
+                                    </li>
+                                    <li class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-128">
+                                        <a href="#"><span>Portfolio</span></a>
+                                        <ul class="sub-menu">
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-135"><a href="../portfolio-2-columns/index.htm"><span>Portfolio 2 columns</span></a></li>
+                                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-145"><a href="../portfolio-3-columns/index.htm"><span>Portfolio 3 columns</span></a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-37"><a href="@Url.Action("Product","Home")"><span>Products</span></a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-168"><a href="../our-recipes/index.htm"><span>Recipes</span></a></li>
+                            <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-112"><a href="../contacts/index.htm"><span>Contacts</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="panel_bottom">
+                </div>
+            </div>
+            <div class="mask"></div>
+        </div>*@
+
+
+
+            <div class="top_panel_title top_panel_style_1  title_present breadcrumbs_present scheme_original">
+                <div style="background-image: url('../../Content/wp-content/uploads/2016/09/title_bg.jpg');" class="top_panel_title_inner top_panel_inner_style_1  title_present_inner breadcrumbs_present_inner">
+                    <div class="content_wrap">
+                        <h1 class="page_title">@ViewBag.Title</h1><div class="breadcrumbs"><a class="breadcrumbs_item home" href="../index.htm">Home</a><span class="breadcrumbs_delimiter"></span><span class="breadcrumbs_item current">@ViewBag.Title</span></div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="page_content_wrap page_paddings_no">
+                <div class="content_wrap">
+                    <div class="content">
+                        <article class="itemscope post_item post_item_single post_featured_default post_format_standard post-110 page type-page status-publish hentry" itemscope="" itemtype="//schema.org/Article">
+                            <section class="post_content" itemprop="articleBody">
+                                <div data-vc-full-width="true" data-vc-full-width-init="false" data-vc-stretch-content="true" class="vc_row wpb_row vc_row-fluid vc_row-no-padding">
+                                    <div class="wpb_column vc_column_container vc_col-sm-12">
+                                        <div class="vc_column-inner">
+                                            <div class="wpb_wrapper">
+                                                <div id="sc_googlemap_1990191612_wrap" class="sc_googlemap_wrap">
+                                                    <div id="sc_googlemap_1990191612" class="sc_googlemap" style="width:100%;height:641px;" data-zoom="16" data-style="greyscale"><iframe src="https://maps.google.com/maps?t=m&output=embed&iwloc=near&z=16&q=Rome" scrolling="no" marginheight="0" marginwidth="0" frameborder="0" aria-label=""></iframe></div><div class="sc_googlemap_content">
+                                                        <div class="sc_section sc_section_block ">
+                                                            <div class="sc_section_inner">
+                                                                <div class="sc_section_content_wrap">
+                                                                    <h4 class="sc_title sc_title_regular">Contact Us</h4><div role="form" class="wpcf7" id="wpcf7-f623-p110-o1" lang="en-US" dir="ltr">
+                                                                        <div class="screen-reader-response"><p role="status" aria-live="polite" aria-atomic="true"></p> <ul></ul></div>
+                                                                        <form action="/contacts/#wpcf7-f623-p110-o1" method="post" class="wpcf7-form init" novalidate="novalidate" data-status="init">
+                                                                            <div style="display: none;">
+                                                                                <input type="hidden" name="_wpcf7" value="623">
+                                                                                <input type="hidden" name="_wpcf7_version" value="5.5.6">
+                                                                                <input type="hidden" name="_wpcf7_locale" value="en_US">
+                                                                                <input type="hidden" name="_wpcf7_unit_tag" value="wpcf7-f623-p110-o1">
+                                                                                <input type="hidden" name="_wpcf7_container_post" value="110">
+                                                                                <input type="hidden" name="_wpcf7_posted_data_hash" value="">
+                                                                            </div>
+                                                                            <p><span class="wpcf7-form-control-wrap your-name"><input type="text" name="your-name" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Name*"></span></p>
+                                                                            <p><span class="wpcf7-form-control-wrap your-email"><input type="email" name="your-email" value="" size="40" class="wpcf7-form-control wpcf7-text wpcf7-email wpcf7-validates-as-required wpcf7-validates-as-email" aria-required="true" aria-invalid="false" placeholder="E-mail*"></span></p>
+                                                                            <p><span class="wpcf7-form-control-wrap your-message"><textarea name="your-message" cols="40" rows="10" class="wpcf7-form-control wpcf7-textarea wpcf7-validates-as-required" aria-required="true" aria-invalid="false" placeholder="Message*"></textarea></span></p>
+                                                                            <p><input type="submit" value="Send Message" class="wpcf7-form-control has-spinner wpcf7-submit"></p>
+                                                                            <div class="wpcf7-response-output" aria-hidden="true"></div>
+                                                                        </form>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div><div class="vc_row-full-width"></div><div class="vc_row wpb_row vc_row-fluid"><div class="wpb_column vc_column_container vc_col-sm-12"><div class="vc_column-inner"><div class="wpb_wrapper"><div class="columns_wrap sc_columns columns_nofluid sc_columns_count_3 margin_top_huge margin_bottom_huge"><div class="column-1_3 sc_column_item sc_column_item_1 odd first" style="text-align:center;"><div class="sc_section section_style_bordered_section"><div class="sc_section_inner"><div class="sc_section_content_wrap"><h4 class="sc_title sc_title_regular sc_align_center" style="margin-top: 2.28em;margin-bottom: 0.28em;text-align:center;">Address</h4><span class="sc_highlight">123, New Lenox Chicago, IL 60606</span><div class="vc_empty_space" style="height: 4.2em"><span class="vc_empty_space_inner"></span></div></div></div></div></div><div class="column-1_3 sc_column_item sc_column_item_2 even" style="text-align:center;"><div class="sc_section section_style_bordered_section"><div class="sc_section_inner"><div class="sc_section_content_wrap"><h4 class="sc_title sc_title_regular sc_align_center" style="margin-top: 2.28em;margin-bottom: 0.28em;text-align:center;">Phone</h4><span class="sc_highlight"><a href="tel:123-456-7890">123-456-7890</a></span><div class="vc_empty_space" style="height: 4.2em"><span class="vc_empty_space_inner"></span></div></div></div></div></div><div class="column-1_3 sc_column_item sc_column_item_3 odd" style="text-align:center;"><div class="sc_section section_style_bordered_section"><div class="sc_section_inner"><div class="sc_section_content_wrap"><h4 class="sc_title sc_title_regular sc_align_center" style="margin-top: 2.28em;margin-bottom: 0.28em;text-align:center;">Email</h4><span class="sc_highlight"><a href="../cdn-cgi/l/email-protection.html#3b52555d547b42544e4948524f5e15585456"><span class="__cf_email__" data-cfemail="4c25222a230c3523393e3f253829622f2321">[email&#160;protected]</span></a></span><div class="vc_empty_space" style="height: 4.2em"><span class="vc_empty_space_inner"></span></div></div></div></div></div></div></div></div></div></div>
+                            </section>
+                        </article>  <section class="related_wrap related_wrap_empty"></section>
+                    </div>
+                </div>
+            </div>
+
+            <footer class="call_wrap">
+                <div class="call_wrap_inner">
+                    <div class="content_wrap">
+                        <h2 class="call-title">Where to Buy</h2> <div class="call-text">Our Products are currently available at select retailers in Connecticut and New York..</div> <a class="sc_button sc_button_size_large sc_button_style_border" href="../contacts/index.htm">Store Locator</a>
+                    </div>
+                </div>
+            </footer>
+            <footer class="footer_wrap widget_area scheme_original">
+                <div class="footer_wrap_inner widget_area_inner">
+                    <div class="content_wrap">
+                        <div class="columns_wrap">
+                            <aside id="nav_menu-2" class="widget_number_1 column-1_4 widget widget_nav_menu">
+                                <h4 class="widget_title">On the Farm</h4><div class="menu-footer-menu-1-container">
+                                    <ul id="menu-footer-menu-1" class="menu">
+                                        <li id="menu-item-582" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-582"><a href="../farm/index.htm">Meet Our Farmers</a></li>
+                                        <li id="menu-item-583" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-583"><a href="../our-recipes/index.htm">Meet the Cows</a></li>
+                                        <li id="menu-item-584" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-584"><a href="../gallery-cobbles/index.htm">Famous Dairy Facts</a></li>
+                                        <li id="menu-item-585" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-585"><a href="../gallery-grid/index.htm">From the Farm to the Fridge</a></li>
+                                        <li id="menu-item-586" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-586"><a href="../contacts/index.htm">Dairy Farm Map</a></li>
+                                        <li id="menu-item-587" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-587"><a href="../classic/index.htm">Farm Practices</a></li>
+                                    </ul>
+                                </div>
+                            </aside><aside id="nav_menu-3" class="widget_number_2 column-1_4 widget widget_nav_menu">
+                                <h4 class="widget_title">In the Kitchen</h4><div class="menu-footer-menu-2-container">
+                                    <ul id="menu-footer-menu-2" class="menu">
+                                        <li id="menu-item-589" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-589"><a href="../our-recipes/index.htm">Recipes</a></li>
+                                        <li id="menu-item-590" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-590"><a href="../masonry-2-columns/index.htm">Lactose Intolerance</a></li>
+                                        <li id="menu-item-591" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-591"><a href="../shop/index.htm">Milk Imitators</a></li>
+                                        <li id="menu-item-592" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-592"><a href="../portfolio-3-columns/index.htm">Organic Milk</a></li>
+                                        <li id="menu-item-593" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-593"><a href="../portfolio-2-columns/index.htm">Flavored Milk</a></li>
+                                        <li id="menu-item-595" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-595"><a href="../contacts/index.htm">Ask Our Dietitian</a></li>
+                                    </ul>
+                                </div>
+                            </aside><aside id="nav_menu-4" class="widget_number_3 column-1_4 widget widget_nav_menu">
+                                <h4 class="widget_title">In the News</h4><div class="menu-footer-menu-3-container">
+                                    <ul id="menu-footer-menu-3" class="menu">
+                                        <li id="menu-item-596" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-596"><a href="../masonry-3-columns/index.htm">Local Milk Blog</a></li>
+                                        <li id="menu-item-597" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-597"><a href="../classic/index.htm">Contests/Sweepstakes</a></li>
+                                        <li id="menu-item-598" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-598"><a href="../gallery-cobbles/index.htm">Videos</a></li>
+                                        <li id="menu-item-599" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item page_item page-item-170 current_page_item menu-item-599"><a href="index.htm" aria-current="page">News Releases</a></li>
+                                        <li id="menu-item-600" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-600"><a href="../about-2/index.htm">Newsletters</a></li>
+                                    </ul>
+                                </div>
+                            </aside><aside id="nav_menu-5" class="widget_number_4 column-1_4 widget widget_nav_menu">
+                                <h4 class="widget_title">About Us</h4><div class="menu-footer-menu-4-container">
+                                    <ul id="menu-footer-menu-4" class="menu">
+                                        <li id="menu-item-601" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-601"><a href="../contacts/index.htm">FAQ</a></li>
+                                        <li id="menu-item-602" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-602"><a href="../farm/index.htm">Our Board</a></li>
+                                        <li id="menu-item-603" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-603"><a href="../about-2/index.htm">Our Staff</a></li>
+                                        <li id="menu-item-604" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-604"><a href="../contacts/index.htm">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                            </aside><aside id="dairy_farm_widget_socials-2" class="widget_number_5 column-1_4 widget widget_socials">
+                                <div class="widget_inner">
+                                    <div class="logo">
+                                        <a href="../index.htm"><img src="~/Content/logo/logo.jpg" class="logo_main" alt="footer-logo" width="74" height="74"></a>
+                                    </div>
+                                </div>
+                            </aside><aside id="text-2" class="widget_number_6 column-1_4 widget widget_text">
+                                <div class="textwidget">
+                                    888 Broadway, New York, NY, 18813<br>
+                                    <span class="accent1">Phone: <a href="tel:123-456-7890">123-456-7890</a></span><br>
+                                    Fax: 123-456-7890<br>
+                                    Email: <a href="../cdn-cgi/l/email-protection.html#abc2c5cdc4ebd2c4ded9d8c2dfce85c8c4c6"><span class="__cf_email__" data-cfemail="fb92959d94bb82948e8988928f9ed5989496">[email&#160;protected]</span></a>
+                                </div>
+                            </aside><aside id="text-3" class="widget_number_7 column-1_4 widget widget_text">
+                                <div class="textwidget"></div>
+                            </aside><aside id="dairy_farm_widget_socials-3" class="widget_number_8 column-1_4 widget widget_socials">
+                                <div class="widget_inner">
+                                    <div class="sc_socials sc_socials_type_icons sc_socials_shape_round sc_socials_size_tiny"><div class="sc_socials_item"><a href="https://twitter.com/themes_ancora" target="_blank" class="social_icons social_twitter"><span class="icon-twitter"></span></a></div><div class="sc_socials_item"><a href="https://www.facebook.com/AncoraThemes/" target="_blank" class="social_icons social_facebook"><span class="icon-facebook"></span></a></div><div class="sc_socials_item"><a href="https://www.linkedin.com/" target="_blank" class="social_icons social_linkedin"><span class="icon-linkedin"></span></a></div></div>
+                                </div>
+                            </aside>
+                        </div>
+                    </div>
+                </div>
+            </footer>
+            <div class="copyright_wrap copyright_style_menu  scheme_original">
+                <div class="copyright_wrap_inner">
+                    <div class="content_wrap">
+                        <ul id="menu_footer" class="menu_footer_nav">
+                            <li id="menu-item-607" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-607"><a href="../farm/index.htm"><span>FAQ</span></a></li>
+                            <li id="menu-item-608" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-608"><a href="../classic/index.htm"><span>News</span></a></li>
+                            <li id="menu-item-609" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-609"><a href="../contacts/index.htm"><span>Contact Us</span></a></li>
+                        </ul> <div class="copyright_text"><p><a href="https://themeforest.net/user/ancorathemes/portfolio" target="_blank" rel="noopener">AncoraThemes</a> © 2022. All rights reserved.</p></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <a href="#" class="scroll_to_top icon-up" title="Scroll to top"></a><div class="custom_html_section"></div>
+    <script data-cfasync="false" src="../cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+    <script type="text/javascript">
+        window.RS_MODULES = window.RS_MODULES || {};
+        window.RS_MODULES.modules = window.RS_MODULES.modules || {};
+        window.RS_MODULES.waiting = window.RS_MODULES.waiting || [];
+        window.RS_MODULES.defered = false;
+        window.RS_MODULES.moduleWaiting = window.RS_MODULES.moduleWaiting || {};
+        window.RS_MODULES.type = 'compiled';
+    </script>
+    <script type="text/javascript">
+        var ajaxRevslider;
+        function rsCustomAjaxContentLoadingFunction() {
+            // CUSTOM AJAX CONTENT LOADING FUNCTION
+            ajaxRevslider = function (obj) {
+
+                // obj.type : Post Type
+                // obj.id : ID of Content to Load
+                // obj.aspectratio : The Aspect Ratio of the Container / Media
+                // obj.selector : The Container Selector where the Content of Ajax will be injected. It is done via the Essential Grid on Return of Content
+
+                var content = '';
+                var data = {
+                    action: 'revslider_ajax_call_front',
+                    client_action: 'get_slider_html',
+                    token: 'f492424189',
+                    type: obj.type,
+                    id: obj.id,
+                    aspectratio: obj.aspectratio
+                };
+
+                // SYNC AJAX REQUEST
+                jQuery.ajax({
+                    type: 'post',
+                    url: 'https://dairy-farm.ancorathemes.com/wp-admin/admin-ajax.php',
+                    dataType: 'json',
+                    data: data,
+                    async: false,
+                    success: function (ret, textStatus, XMLHttpRequest) {
+                        if (ret.success == true)
+                            content = ret.data;
+                    },
+                    error: function (e) {
+                        console.log(e);
+                    }
+                });
+
+                // FIRST RETURN THE CONTENT WHEN IT IS LOADED !!
+                return content;
+            };
+
+            // CUSTOM AJAX FUNCTION TO REMOVE THE SLIDER
+            var ajaxRemoveRevslider = function (obj) {
+                return jQuery(obj.selector + ' .rev_slider').revkill();
+            };
+
+
+            // EXTEND THE AJAX CONTENT LOADING TYPES WITH TYPE AND FUNCTION
+            if (jQuery.fn.tpessential !== undefined)
+                if (typeof (jQuery.fn.tpessential.defaults) !== 'undefined')
+                    jQuery.fn.tpessential.defaults.ajaxTypes.push({ type: 'revslider', func: ajaxRevslider, killfunc: ajaxRemoveRevslider, openAnimationSpeed: 0.3 });
+            // type:  Name of the Post to load via Ajax into the Essential Grid Ajax Container
+            // func: the Function Name which is Called once the Item with the Post Type has been clicked
+            // killfunc: function to kill in case the Ajax Window going to be removed (before Remove function !
+            // openAnimationSpeed: how quick the Ajax Content window should be animated (default is 0.3)
+        }
+
+        var rsCustomAjaxContent_Once = false
+        if (document.readyState === "loading")
+            document.addEventListener('readystatechange', function () {
+                if ((document.readyState === "interactive" || document.readyState === "complete") && !rsCustomAjaxContent_Once) {
+                    rsCustomAjaxContent_Once = true;
+                    rsCustomAjaxContentLoadingFunction();
+                }
+            });
+        else {
+            rsCustomAjaxContent_Once = true;
+            rsCustomAjaxContentLoadingFunction();
+        }
+    </script>
+    <script type="text/html" id="wpb-modifications">
+    </script>
+    <script type="text/javascript">
+        (function () {
+            var c = document.body.className;
+            c = c.replace(/woocommerce-no-js/, 'woocommerce-js');
+            document.body.className = c;
+        })();
+    </script>
+    <link rel='stylesheet' id='rs-plugin-settings-css' href='~/Content/wp-content/plugins/revslider/public/assets/css/rs6.css?ver=6.5.11' type='text/css' media='all'>
+    <style id='rs-plugin-settings-inline-css' type='text/css'>
+        #rs-demo-id {
+        }
+    </style>
+    <script type='text/javascript' src='~/Content/wp-includes/js/dist/vendor/regenerator-runtime.min.js?ver=0.13.9' id='regenerator-runtime-js'></script>
+    <script type='text/javascript' src='~/Content/wp-includes/js/dist/vendor/wp-polyfill.min.js?ver=3.15.0' id='wp-polyfill-js'></script>
+    <script type='text/javascript' id='contact-form-7-js-extra'>
+        /* <![CDATA[ */
+        var wpcf7 = { "api": { "root": "https:\/\/dairy-farm.ancorathemes.com\/wp-json\/", "namespace": "contact-form-7\/v1" } };
+        /* ]]> */
+    </script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/contact-form-7/includes/js/index.js?ver=5.5.6' id='contact-form-7-js'></script>
+    <script type='text/javascript' id='trx_demo_panels-js-extra'>
+        /* <![CDATA[ */
+        var TRX_DEMO_STORAGE = { "ajax_url": "https:\/\/dairy-farm.ancorathemes.com\/wp-admin\/admin-ajax.php", "ajax_nonce": "ba4fb27a06", "site_url": "https:\/\/dairy-farm.ancorathemes.com", "user_logged_in": "0", "msg_ajax_error": "Invalid server response! Try again later.", "tabs_delay": "5000" };
+        /* ]]> */
+    </script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/trx_demo-master/js/trx_demo_panels.js' id='trx_demo_panels-js'></script>
+    <script type='text/javascript' id='trx_utils-js-extra'>
+/* <![CDATA[ */
+var TRX_UTILS_STORAGE = {"ajax_url":"https:\/\/dairy-farm.ancorathemes.com\/wp-admin\/admin-ajax.php","ajax_nonce":"ba4fb27a06","site_url":"https:\/\/dairy-farm.ancorathemes.com","user_logged_in":"0","email_mask":"^([a-zA-Z0-9_\\-]+\\.)*[a-zA-Z0-9_\\-]+@@[a-z0-9_\\-]+(\\.[a-z0-9_\\-]+)*\\.[a-z]{2,6}$","msg_ajax_error":"Invalid server answer!","msg_error_global":"Invalid field's value!","msg_name_empty":"The name can't be empty","msg_email_empty":"Too short (or empty) email address","msg_email_not_valid":"E-mail address is invalid","msg_text_empty":"The message text can't be empty","msg_send_complete":"Send message complete!","msg_send_error":"Transmit failed!","login_via_ajax":"1","msg_login_empty":"The Login field can't be empty","msg_login_long":"The Login field is too long","msg_password_empty":"The password can't be empty and shorter then 4 characters","msg_password_long":"The password is too long","msg_login_success":"Login success! The page will be reloaded in 3 sec.","msg_login_error":"Login failed!","msg_not_agree":"Please, read and check 'Terms and Conditions'","msg_email_long":"E-mail address is too long","msg_password_not_equal":"The passwords in both fields are not equal","msg_registration_success":"Registration success! Please log in!","msg_registration_error":"Registration failed!"};
+/* ]]> */
+    </script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/trx_utils/js/trx_utils.js' id='trx_utils-js'></script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/woocommerce/assets/js/js-cookie/js.cookie.min.js?ver=2.1.4-wc.6.4.1' id='js-cookie-js'></script>
+    <script type='text/javascript' id='woocommerce-js-extra'>
+        /* <![CDATA[ */
+        var woocommerce_params = { "ajax_url": "\/wp-admin\/admin-ajax.php", "wc_ajax_url": "\/?wc-ajax=%%endpoint%%" };
+        /* ]]> */
+    </script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/woocommerce/assets/js/frontend/woocommerce.min.js?ver=6.4.1' id='woocommerce-js'></script>
+    <script type='text/javascript' id='wc-cart-fragments-js-extra'>
+        /* <![CDATA[ */
+        var wc_cart_fragments_params = { "ajax_url": "\/wp-admin\/admin-ajax.php", "wc_ajax_url": "\/?wc-ajax=%%endpoint%%", "cart_hash_key": "wc_cart_hash_2e73998ca498f45dc726f3dc921a5bad", "fragment_name": "wc_fragments_2e73998ca498f45dc726f3dc921a5bad", "request_timeout": "5000" };
+        /* ]]> */
+    </script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/woocommerce/assets/js/frontend/cart-fragments.min.js?ver=6.4.1' id='wc-cart-fragments-js'></script>
+    <script type='text/javascript' src='~/Content/wp-content/themes/dairy-farm/fw/js/superfish.js' id='superfish-js'></script>
+    <script type='text/javascript' src='~/Content/wp-content/themes/dairy-farm/fw/js/core.utils.js' id='dairy-farm-core-utils-script-js'></script>
+    <script type='text/javascript' id='dairy-farm-core-init-script-js-extra'>
+/* <![CDATA[ */
+var DAIRY_FARM_STORAGE = {"system_message":{"message":"","status":"","header":""},"theme_font":"Average","theme_color":"#231f20","theme_bg_color":"#ffffff","strings":{"ajax_error":"Invalid server answer","bookmark_add":"Add the bookmark","bookmark_added":"Current page has been successfully added to the bookmarks. You can see it in the right panel on the tab &#039;Bookmarks&#039;","bookmark_del":"Delete this bookmark","bookmark_title":"Enter bookmark title","bookmark_exists":"Current page already exists in the bookmarks list","search_error":"Error occurs in AJAX search! Please, type your query and press search icon for the traditional search way.","email_confirm":"On the e-mail address &quot;%s&quot; we sent a confirmation email. Please, open it and click on the link.","reviews_vote":"Thanks for your vote! New average rating is:","reviews_error":"Error saving your vote! Please, try again later.","error_like":"Error saving your like! Please, try again later.","error_global":"Global error text","name_empty":"The name can&#039;t be empty","name_long":"Too long name","email_empty":"Too short (or empty) email address","email_long":"Too long email address","email_not_valid":"Invalid email address","subject_empty":"The subject can&#039;t be empty","subject_long":"Too long subject","text_empty":"The message text can&#039;t be empty","text_long":"Too long message text","send_complete":"Send message complete!","send_error":"Transmit failed!","geocode_error":"Geocode was not successful for the following reason:","googlemap_not_avail":"Google map API not available!","editor_save_success":"Post content saved!","editor_save_error":"Error saving post data!","editor_delete_post":"You really want to delete the current post?","editor_delete_post_header":"Delete post","editor_delete_success":"Post deleted!","editor_delete_error":"Error deleting post!","editor_caption_cancel":"Cancel","editor_caption_close":"Close"},"ajax_url":"https:\/\/dairy-farm.ancorathemes.com\/wp-admin\/admin-ajax.php","ajax_nonce":"ba4fb27a06","site_url":"https:\/\/dairy-farm.ancorathemes.com","site_protocol":"https","vc_edit_mode":"","accent1_color":"#fec321","accent1_hover":"#d7a92b","slider_height":"100","user_logged_in":"","toc_menu":"float","toc_menu_home":"1","toc_menu_top":"1","menu_fixed":"1","menu_mobile":"1025","menu_hover":"fade","button_hover":"default","input_hover":"default","demo_time":"0","media_elements_enabled":"1","ajax_search_enabled":"1","ajax_search_min_length":"3","ajax_search_delay":"200","css_animation":"1","menu_animation_in":"fadeInUp","menu_animation_out":"fadeOutDown","popup_engine":"pretty","email_mask":"^([a-zA-Z0-9_\\-]+\\.)*[a-zA-Z0-9_\\-]+@@[a-z0-9_\\-]+(\\.[a-z0-9_\\-]+)*\\.[a-z]{2,6}$","contacts_maxlength":"1000","comments_maxlength":"1000","remember_visitors_settings":"","admin_mode":"","isotope_resize_delta":"0.3","error_message_box":null,"viewmore_busy":"","video_resize_inited":"","top_panel_height":"0"};
+/* ]]> */
+    </script>
+    <script type='text/javascript' src='~/Content/wp-content/themes/dairy-farm/fw/js/core.init.js' id='dairy-farm-core-init-script-js'></script>
+    <script type='text/javascript' src='~/Content/wp-content/themes/dairy-farm/js/theme.init.js' id='dairy-farm-theme-init-script-js'></script>
+    <script type='text/javascript' id='mediaelement-core-js-before'>
+        var mejsL10n = { "language": "en", "strings": { "mejs.download-file": "Download File", "mejs.install-flash": "You are using a browser that does not have Flash player enabled or installed. Please turn on your Flash player plugin or download the latest version from https:\/\/get.adobe.com\/flashplayer\/", "mejs.fullscreen": "Fullscreen", "mejs.play": "Play", "mejs.pause": "Pause", "mejs.time-slider": "Time Slider", "mejs.time-help-text": "Use Left\/Right Arrow keys to advance one second, Up\/Down arrows to advance ten seconds.", "mejs.live-broadcast": "Live Broadcast", "mejs.volume-help-text": "Use Up\/Down Arrow keys to increase or decrease volume.", "mejs.unmute": "Unmute", "mejs.mute": "Mute", "mejs.volume-slider": "Volume Slider", "mejs.video-player": "Video Player", "mejs.audio-player": "Audio Player", "mejs.captions-subtitles": "Captions\/Subtitles", "mejs.captions-chapters": "Chapters", "mejs.none": "None", "mejs.afrikaans": "Afrikaans", "mejs.albanian": "Albanian", "mejs.arabic": "Arabic", "mejs.belarusian": "Belarusian", "mejs.bulgarian": "Bulgarian", "mejs.catalan": "Catalan", "mejs.chinese": "Chinese", "mejs.chinese-simplified": "Chinese (Simplified)", "mejs.chinese-traditional": "Chinese (Traditional)", "mejs.croatian": "Croatian", "mejs.czech": "Czech", "mejs.danish": "Danish", "mejs.dutch": "Dutch", "mejs.english": "English", "mejs.estonian": "Estonian", "mejs.filipino": "Filipino", "mejs.finnish": "Finnish", "mejs.french": "French", "mejs.galician": "Galician", "mejs.german": "German", "mejs.greek": "Greek", "mejs.haitian-creole": "Haitian Creole", "mejs.hebrew": "Hebrew", "mejs.hindi": "Hindi", "mejs.hungarian": "Hungarian", "mejs.icelandic": "Icelandic", "mejs.indonesian": "Indonesian", "mejs.irish": "Irish", "mejs.italian": "Italian", "mejs.japanese": "Japanese", "mejs.korean": "Korean", "mejs.latvian": "Latvian", "mejs.lithuanian": "Lithuanian", "mejs.macedonian": "Macedonian", "mejs.malay": "Malay", "mejs.maltese": "Maltese", "mejs.norwegian": "Norwegian", "mejs.persian": "Persian", "mejs.polish": "Polish", "mejs.portuguese": "Portuguese", "mejs.romanian": "Romanian", "mejs.russian": "Russian", "mejs.serbian": "Serbian", "mejs.slovak": "Slovak", "mejs.slovenian": "Slovenian", "mejs.spanish": "Spanish", "mejs.swahili": "Swahili", "mejs.swedish": "Swedish", "mejs.tagalog": "Tagalog", "mejs.thai": "Thai", "mejs.turkish": "Turkish", "mejs.ukrainian": "Ukrainian", "mejs.vietnamese": "Vietnamese", "mejs.welsh": "Welsh", "mejs.yiddish": "Yiddish" } };
+    </script>
+    <script type='text/javascript' src='~/Content/wp-includes/js/mediaelement/mediaelement-and-player.min.js?ver=4.2.16' id='mediaelement-core-js'></script>
+    <script type='text/javascript' src='~/Content/wp-includes/js/mediaelement/mediaelement-migrate.min.js?ver=5.9.2' id='mediaelement-migrate-js'></script>
+    <script type='text/javascript' id='mediaelement-js-extra'>
+        /* <![CDATA[ */
+        var _wpmejsSettings = { "pluginPath": "\/wp-includes\/js\/mediaelement\/", "classPrefix": "mejs-", "stretching": "responsive" };
+        /* ]]> */
+    </script>
+    <script type='text/javascript' src='~/Content/wp-includes/js/mediaelement/wp-mediaelement.min.js?ver=5.9.2' id='wp-mediaelement-js'></script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/trx_utils/shortcodes/theme.shortcodes.js' id='dairy-farm-shortcodes-script-js'></script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/js_composer/assets/js/dist/js_composer_front.min.js?ver=6.8.0' id='wpb_composer_front_js-js'></script>
+    <script type='text/javascript' src='~/Content/wp-content/plugins/trx_utils/js/core.googlemap.js' id='dairy-farm-googlemap-script-js'></script>
+    <script type='text/javascript' id='cooked-functions-js-js-extra'>
+        /* <![CDATA[ */
+        var cooked_js_vars = { "ajax_url": "https:\/\/dairy-farm.ancorathemes.com\/wp-admin\/admin-ajax.php", "timer_sound": "https:\/\/dairy-farm.ancorathemes.com\/wp-content\/plugins\/cooked\/assets\/audio\/ding.mp3", "i18n_timer": "Timer" };
+        /* ]]> */
+    </script>
+       
+    <style type="text/css">
+        .trx_demo_inline_1000900418 {
+            color: #ffffff !important;
+            border-color: #ffaa5f !important;
+            background-color: #ffaa5f !important;
+        }
+
+        .trx_demo_inline_1731227847:hover {
+            color: #ffffff !important;
+            border-color: #cc884c !important;
+            background-color: #cc884c !important;
+        }
+    </style>
+    <script src="../1_105_0/static/js/render.9a9c29fa54bcc269cd07.js" async=""></script>
+</body>
+</html>

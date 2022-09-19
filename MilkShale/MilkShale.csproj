@@ -1,0 +1,791 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{7B66E383-1541-4932-994C-E403459A2AB1}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MilkShale</RootNamespace>
+    <AssemblyName>MilkShale</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44344</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Areas\Admin\AdminAreaRegistration.cs" />
+    <Compile Include="Areas\Admin\Controllers\AdminController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\LoginController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Models\BusinessLayer.cs" />
+    <Compile Include="Models\DataLayer.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Areas\Admin\assets\css\style.css" />
+    <Content Include="Areas\Admin\assets\images\dashboard\circle.svg" />
+    <Content Include="Areas\Admin\assets\images\dashboard\img_1.jpg" />
+    <Content Include="Areas\Admin\assets\images\dashboard\img_2.jpg" />
+    <Content Include="Areas\Admin\assets\images\dashboard\img_3.jpg" />
+    <Content Include="Areas\Admin\assets\images\dashboard\img_4.jpg" />
+    <Content Include="Areas\Admin\assets\images\faces-clipart\pic-1.png" />
+    <Content Include="Areas\Admin\assets\images\faces-clipart\pic-2.png" />
+    <Content Include="Areas\Admin\assets\images\faces-clipart\pic-3.png" />
+    <Content Include="Areas\Admin\assets\images\faces-clipart\pic-4.png" />
+    <Content Include="Areas\Admin\assets\images\faces\face1.jpg" />
+    <Content Include="Areas\Admin\assets\images\faces\face2.jpg" />
+    <Content Include="Areas\Admin\assets\images\faces\face3.jpg" />
+    <Content Include="Areas\Admin\assets\images\faces\face4.jpg" />
+    <Content Include="Areas\Admin\assets\images\favicon.ico" />
+    <Content Include="Areas\Admin\assets\images\logo-mini.svg" />
+    <Content Include="Areas\Admin\assets\images\logo.svg" />
+    <Content Include="Areas\Admin\assets\js\chart.js" />
+    <Content Include="Areas\Admin\assets\js\dashboard.js" />
+    <Content Include="Areas\Admin\assets\js\file-upload.js" />
+    <Content Include="Areas\Admin\assets\js\hoverable-collapse.js" />
+    <Content Include="Areas\Admin\assets\js\misc.js" />
+    <Content Include="Areas\Admin\assets\js\off-canvas.js" />
+    <Content Include="Areas\Admin\assets\js\todolist.js" />
+    <Content Include="Areas\Admin\assets\vendors\chart.js\Chart.min.js" />
+    <Content Include="Areas\Admin\assets\vendors\css\vendor.bundle.base.css" />
+    <Content Include="Areas\Admin\assets\vendors\js\vendor.bundle.base.js" />
+    <Content Include="Areas\Admin\assets\vendors\mdi\css\materialdesignicons.min.css" />
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="Content\css\CustomStyle.css" />
+    <Content Include="Content\js\Customtheme.js" />
+    <Content Include="Content\logo\logo.jpg" />
+    <Content Include="Content\wp-content\plugins\contact-form-7\includes\css\styles.css" />
+    <Content Include="Content\wp-content\plugins\contact-form-7\includes\js\index.js" />
+    <Content Include="Content\wp-content\plugins\cooked\assets\admin\css\essentials.min.css" />
+    <Content Include="Content\wp-content\plugins\cooked\assets\css\icons.min.css" />
+    <Content Include="Content\wp-content\plugins\cooked\assets\css\print.min.css" />
+    <Content Include="Content\wp-content\plugins\cooked\assets\css\style.min.css" />
+    <Content Include="Content\wp-content\plugins\cooked\assets\js\cooked-functions.min.js" />
+    <Content Include="Content\wp-content\plugins\essential-grid\public\assets\css\jquery.esgbox.min.css" />
+    <Content Include="Content\wp-content\plugins\essential-grid\public\assets\css\settings.css" />
+    <Content Include="Content\wp-content\plugins\essential-grid\public\assets\font\fontello\css\fontello.css" />
+    <Content Include="Content\wp-content\plugins\essential-grid\public\assets\font\fontello\fonts\egfont.svg" />
+    <Content Include="Content\wp-content\plugins\essential-grid\public\assets\images\ajax-loader.gif" />
+    <Content Include="Content\wp-content\plugins\essential-grid\public\assets\images\loader.gif" />
+    <Content Include="Content\wp-content\plugins\essential-grid\public\assets\js\esg.min.js" />
+    <Content Include="Content\wp-content\plugins\essential-grid\public\assets\js\esgbox.min.js" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\css\js_composer.min.css" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\fonts\vc_grid\vc_grid_v1.svg" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\fonts\vc_icons_v2\fonts\vcpb-plugin-icons.svg" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\images\flickr.png" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\images\icons\address-book.png" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\images\icons\alarm-clock.png" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\images\icons\anchor.png" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\images\icons\application-image.png" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\images\icons\arrow.png" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\images\icons\asterisk.png" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\images\icons\auction-hammer.png" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\images\icons\balloon-buzz.png" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\images\icons\balloon-facebook.png" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\images\icons\balloon-twitter.png" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\images\icons\balloon.png" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\images\icons\battery-full.png" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\images\icons\binocular.png" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\images\icons\blue-document-excel.png" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\images\icons\blue-document-image.png" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\images\icons\blue-document-music.png" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\images\icons\blue-document-office.png" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\images\icons\blue-document-pdf.png" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\images\icons\blue-document-powerpoint.png" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\images\icons\blue-document-word.png" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\images\icons\bookmark.png" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\images\icons\camcorder.png" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\images\icons\camera.png" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\images\icons\chart-pie.png" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\images\icons\chart.png" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\images\icons\clock.png" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\images\icons\control.png" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\images\icons\fire.png" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\images\icons\heart.png" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\images\icons\mail.png" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\images\icons\plus-shield.png" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\images\icons\video.png" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\images\spinner.gif" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\images\toggle_close.png" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\images\toggle_open.png" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\js\dist\js_composer_front.min.js" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\js\vendors\woocommerce-add-to-cart.js" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\lib\bower\isotope\dist\isotope.pkgd.min.js" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\lib\flexslider\jquery.flexslider.min.js" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\vc\alert.png" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\vc\blur.svg" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\vc\exclamation.png" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\vc\info.png" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\vc\remove.png" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\vc\tick.png" />
+    <Content Include="Content\wp-content\plugins\product-delivery-date-for-woocommerce-lite\css\datepicker.css" />
+    <Content Include="Content\wp-content\plugins\product-delivery-date-for-woocommerce-lite\css\themes\smoothness\images\ui-bg_flat_0_aaaaaa_40x100.png" />
+    <Content Include="Content\wp-content\plugins\product-delivery-date-for-woocommerce-lite\css\themes\smoothness\images\ui-bg_flat_75_ffffff_40x100.png" />
+    <Content Include="Content\wp-content\plugins\product-delivery-date-for-woocommerce-lite\css\themes\smoothness\images\ui-bg_glass_55_fbf9ee_1x400.png" />
+    <Content Include="Content\wp-content\plugins\product-delivery-date-for-woocommerce-lite\css\themes\smoothness\images\ui-bg_glass_65_ffffff_1x400.png" />
+    <Content Include="Content\wp-content\plugins\product-delivery-date-for-woocommerce-lite\css\themes\smoothness\images\ui-bg_glass_75_dadada_1x400.png" />
+    <Content Include="Content\wp-content\plugins\product-delivery-date-for-woocommerce-lite\css\themes\smoothness\images\ui-bg_glass_75_e6e6e6_1x400.png" />
+    <Content Include="Content\wp-content\plugins\product-delivery-date-for-woocommerce-lite\css\themes\smoothness\images\ui-bg_glass_95_fef1ec_1x400.png" />
+    <Content Include="Content\wp-content\plugins\product-delivery-date-for-woocommerce-lite\css\themes\smoothness\images\ui-bg_highlight-soft_75_cccccc_1x100.png" />
+    <Content Include="Content\wp-content\plugins\product-delivery-date-for-woocommerce-lite\css\themes\smoothness\images\ui-icons_222222_256x240.png" />
+    <Content Include="Content\wp-content\plugins\product-delivery-date-for-woocommerce-lite\css\themes\smoothness\images\ui-icons_2e83ff_256x240.png" />
+    <Content Include="Content\wp-content\plugins\product-delivery-date-for-woocommerce-lite\css\themes\smoothness\images\ui-icons_454545_256x240.png" />
+    <Content Include="Content\wp-content\plugins\product-delivery-date-for-woocommerce-lite\css\themes\smoothness\images\ui-icons_888888_256x240.png" />
+    <Content Include="Content\wp-content\plugins\product-delivery-date-for-woocommerce-lite\css\themes\smoothness\images\ui-icons_cd0a0a_256x240.png" />
+    <Content Include="Content\wp-content\plugins\product-delivery-date-for-woocommerce-lite\css\themes\smoothness\jquery-ui.css" />
+    <Content Include="Content\wp-content\plugins\product-delivery-date-for-woocommerce-lite\images\cal.png" />
+    <Content Include="Content\wp-content\plugins\product-delivery-date-for-woocommerce-lite\js\i18n\jquery.ui.datepicker-en-GB.js" />
+    <Content Include="Content\wp-content\plugins\product-delivery-date-for-woocommerce-lite\js\initialize-datepicker.js" />
+    <Content Include="Content\wp-content\plugins\revslider\public\assets\assets\coloredbg.png" />
+    <Content Include="Content\wp-content\plugins\revslider\public\assets\assets\dummy.png" />
+    <Content Include="Content\wp-content\plugins\revslider\public\assets\assets\gridtile.png" />
+    <Content Include="Content\wp-content\plugins\revslider\public\assets\assets\gridtile_3x3.png" />
+    <Content Include="Content\wp-content\plugins\revslider\public\assets\assets\gridtile_3x3_white.png" />
+    <Content Include="Content\wp-content\plugins\revslider\public\assets\assets\gridtile_white.png" />
+    <Content Include="Content\wp-content\plugins\revslider\public\assets\assets\loader.gif" />
+    <Content Include="Content\wp-content\plugins\revslider\public\assets\css\closedhand.cur" />
+    <Content Include="Content\wp-content\plugins\revslider\public\assets\css\openhand.cur" />
+    <Content Include="Content\wp-content\plugins\revslider\public\assets\css\rs6.css" />
+    <Content Include="Content\wp-content\plugins\revslider\public\assets\fonts\revicons\revicons.svg" />
+    <Content Include="Content\wp-content\plugins\revslider\public\assets\js\rbtools.min.js" />
+    <Content Include="Content\wp-content\plugins\revslider\public\assets\js\rs6.min.js" />
+    <Content Include="Content\wp-content\plugins\trx_demo-master\css\font-icons\css\animation.css" />
+    <Content Include="Content\wp-content\plugins\trx_demo-master\css\font-icons\css\trx_demo_icons.css" />
+    <Content Include="Content\wp-content\plugins\trx_demo-master\css\font-icons\font\trx_demo_icons.svg" />
+    <Content Include="Content\wp-content\plugins\trx_demo-master\css\trx_demo_panels.css" />
+    <Content Include="Content\wp-content\plugins\trx_demo-master\js\trx_demo_panels.js" />
+    <Content Include="Content\wp-content\plugins\trx_utils\js\core.googlemap.js" />
+    <Content Include="Content\wp-content\plugins\trx_utils\js\core.reviews.js" />
+    <Content Include="Content\wp-content\plugins\trx_utils\js\trx_utils.js" />
+    <Content Include="Content\wp-content\plugins\trx_utils\shortcodes\theme.shortcodes.css" />
+    <Content Include="Content\wp-content\plugins\trx_utils\shortcodes\theme.shortcodes.js" />
+    <Content Include="Content\wp-content\plugins\woocommerce\assets\css\photoswipe\default-skin\default-skin.min.css" />
+    <Content Include="Content\wp-content\plugins\woocommerce\assets\css\photoswipe\default-skin\default-skin.png" />
+    <Content Include="Content\wp-content\plugins\woocommerce\assets\css\photoswipe\default-skin\default-skin.svg" />
+    <Content Include="Content\wp-content\plugins\woocommerce\assets\css\photoswipe\default-skin\preloader.gif" />
+    <Content Include="Content\wp-content\plugins\woocommerce\assets\css\photoswipe\photoswipe.min.css" />
+    <Content Include="Content\wp-content\plugins\woocommerce\assets\css\woocommerce-layout.css" />
+    <Content Include="Content\wp-content\plugins\woocommerce\assets\css\woocommerce-smallscreen.css" />
+    <Content Include="Content\wp-content\plugins\woocommerce\assets\css\woocommerce.css" />
+    <Content Include="Content\wp-content\plugins\woocommerce\assets\fonts\star.svg" />
+    <Content Include="Content\wp-content\plugins\woocommerce\assets\fonts\WooCommerce.svg" />
+    <Content Include="Content\wp-content\plugins\woocommerce\assets\images\icons\credit-cards\amex.svg" />
+    <Content Include="Content\wp-content\plugins\woocommerce\assets\images\icons\credit-cards\diners.svg" />
+    <Content Include="Content\wp-content\plugins\woocommerce\assets\images\icons\credit-cards\discover.svg" />
+    <Content Include="Content\wp-content\plugins\woocommerce\assets\images\icons\credit-cards\jcb.svg" />
+    <Content Include="Content\wp-content\plugins\woocommerce\assets\images\icons\credit-cards\laser.svg" />
+    <Content Include="Content\wp-content\plugins\woocommerce\assets\images\icons\credit-cards\maestro.svg" />
+    <Content Include="Content\wp-content\plugins\woocommerce\assets\images\icons\credit-cards\mastercard.svg" />
+    <Content Include="Content\wp-content\plugins\woocommerce\assets\images\icons\credit-cards\visa.svg" />
+    <Content Include="Content\wp-content\plugins\woocommerce\assets\images\icons\loader.svg" />
+    <Content Include="Content\wp-content\plugins\woocommerce\assets\js\accounting\accounting.min.js" />
+    <Content Include="Content\wp-content\plugins\woocommerce\assets\js\frontend\add-to-cart-variation.min.js" />
+    <Content Include="Content\wp-content\plugins\woocommerce\assets\js\frontend\add-to-cart.min.js" />
+    <Content Include="Content\wp-content\plugins\woocommerce\assets\js\frontend\cart-fragments.min.js" />
+    <Content Include="Content\wp-content\plugins\woocommerce\assets\js\frontend\price-slider.min.js" />
+    <Content Include="Content\wp-content\plugins\woocommerce\assets\js\frontend\single-product.min.js" />
+    <Content Include="Content\wp-content\plugins\woocommerce\assets\js\frontend\woocommerce.min.js" />
+    <Content Include="Content\wp-content\plugins\woocommerce\assets\js\jquery-blockui\jquery.blockUI.min.js" />
+    <Content Include="Content\wp-content\plugins\woocommerce\assets\js\jquery-ui-touch-punch\jquery-ui-touch-punch.min.js" />
+    <Content Include="Content\wp-content\plugins\woocommerce\assets\js\js-cookie\js.cookie.min.js" />
+    <Content Include="Content\wp-content\plugins\woocommerce\assets\js\photoswipe\photoswipe-ui-default.min.js" />
+    <Content Include="Content\wp-content\plugins\woocommerce\assets\js\photoswipe\photoswipe.min.js" />
+    <Content Include="Content\wp-content\plugins\woocommerce\assets\js\select2\select2.full.min.js" />
+    <Content Include="Content\wp-content\plugins\woocommerce\assets\js\zoom\jquery.zoom.min.js" />
+    <Content Include="Content\wp-content\plugins\woocommerce\packages\woocommerce-blocks\build\wc-blocks-style.css" />
+    <Content Include="Content\wp-content\plugins\woocommerce\packages\woocommerce-blocks\build\wc-blocks-vendors-style.css" />
+    <Content Include="Content\wp-content\plugins\wp-gdpr-compliance\Assets\css\front.css" />
+    <Content Include="Content\wp-content\plugins\wp-gdpr-compliance\Assets\js\front.min.js" />
+    <Content Include="Content\wp-content\themes\dairy-farm\css\fontello\css\fontello.css" />
+    <Content Include="Content\wp-content\themes\dairy-farm\css\fontello\font\fontello.svg" />
+    <Content Include="Content\wp-content\themes\dairy-farm\css\plugin.woocommerce.css" />
+    <Content Include="Content\wp-content\themes\dairy-farm\css\responsive.css" />
+    <Content Include="Content\wp-content\themes\dairy-farm\css\theme.css" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\css\core.animation.css" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\css\core.portfolio.css" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\core.init.js" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\core.messages\core.messages.css" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\core.messages\core.messages.js" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\core.utils.js" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\countdown\jquery.countdown.js" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\countdown\jquery.plugin.js" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\diagram\chart.min.js" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\hover\jquery.hoverdir.js" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\photostack\modernizr.min.js" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\prettyphoto\css\prettyPhoto.css" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\prettyphoto\images\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\prettyphoto\images\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\prettyphoto\images\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\prettyphoto\images\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\prettyphoto\images\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\prettyphoto\images\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\prettyphoto\images\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\prettyphoto\images\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\prettyphoto\images\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\prettyphoto\images\prettyPhoto\default\default_thumb.png" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\prettyphoto\images\prettyPhoto\default\loader.gif" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\prettyphoto\images\prettyPhoto\default\sprite.png" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\prettyphoto\images\prettyPhoto\default\sprite_next.png" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\prettyphoto\images\prettyPhoto\default\sprite_prev.png" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\prettyphoto\images\prettyPhoto\default\sprite_x.png" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\prettyphoto\images\prettyPhoto\default\sprite_y.png" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\prettyphoto\images\prettyPhoto\facebook\btnNext.png" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\prettyphoto\images\prettyPhoto\facebook\btnPrevious.png" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\prettyphoto\images\prettyPhoto\facebook\contentPatternBottom.png" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\prettyphoto\images\prettyPhoto\facebook\contentPatternLeft.png" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\prettyphoto\images\prettyPhoto\facebook\contentPatternRight.png" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\prettyphoto\images\prettyPhoto\facebook\contentPatternTop.png" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\prettyphoto\images\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\prettyphoto\images\prettyPhoto\facebook\loader.gif" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\prettyphoto\images\prettyPhoto\facebook\sprite.png" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\prettyphoto\images\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\prettyphoto\images\prettyPhoto\light_rounded\btnPrevious.png" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\prettyphoto\images\prettyPhoto\light_rounded\loader.gif" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\prettyphoto\images\prettyPhoto\light_rounded\sprite.png" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\prettyphoto\images\prettyPhoto\light_square\btnNext.png" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\prettyphoto\images\prettyPhoto\light_square\btnPrevious.png" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\prettyphoto\images\prettyPhoto\light_square\sprite.png" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\prettyphoto\jquery.prettyPhoto.min.js" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\social\social-share.js" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\superfish.js" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\swiper\swiper.css" />
+    <Content Include="Content\wp-content\themes\dairy-farm\fw\js\swiper\swiper.js" />
+    <Content Include="Content\wp-content\themes\dairy-farm\images\bg\image_1.jpg" />
+    <Content Include="Content\wp-content\themes\dairy-farm\images\bg\image_2.jpg" />
+    <Content Include="Content\wp-content\themes\dairy-farm\images\bg\image_3.jpg" />
+    <Content Include="Content\wp-content\themes\dairy-farm\images\bg\pattern_1.jpg" />
+    <Content Include="Content\wp-content\themes\dairy-farm\images\bg\pattern_2.jpg" />
+    <Content Include="Content\wp-content\themes\dairy-farm\images\bg\pattern_3.jpg" />
+    <Content Include="Content\wp-content\themes\dairy-farm\images\bg\pattern_4.jpg" />
+    <Content Include="Content\wp-content\themes\dairy-farm\images\bg\pattern_5.jpg" />
+    <Content Include="Content\wp-content\themes\dairy-farm\images\bg\texture_1.png" />
+    <Content Include="Content\wp-content\themes\dairy-farm\images\bg\texture_10.png" />
+    <Content Include="Content\wp-content\themes\dairy-farm\images\bg\texture_11.png" />
+    <Content Include="Content\wp-content\themes\dairy-farm\images\bg\texture_12.png" />
+    <Content Include="Content\wp-content\themes\dairy-farm\images\bg\texture_2.png" />
+    <Content Include="Content\wp-content\themes\dairy-farm\images\bg\texture_3.png" />
+    <Content Include="Content\wp-content\themes\dairy-farm\images\bg\texture_4.png" />
+    <Content Include="Content\wp-content\themes\dairy-farm\images\bg\texture_5.png" />
+    <Content Include="Content\wp-content\themes\dairy-farm\images\bg\texture_6.png" />
+    <Content Include="Content\wp-content\themes\dairy-farm\images\bg\texture_7.png" />
+    <Content Include="Content\wp-content\themes\dairy-farm\images\bg\texture_8.png" />
+    <Content Include="Content\wp-content\themes\dairy-farm\images\bg\texture_9.png" />
+    <Content Include="Content\wp-content\themes\dairy-farm\images\bg_dark.jpg" />
+    <Content Include="Content\wp-content\themes\dairy-farm\images\bg_light.jpg" />
+    <Content Include="Content\wp-content\themes\dairy-farm\images\bg_yellow.jpg" />
+    <Content Include="Content\wp-content\themes\dairy-farm\images\rating_summary_bg.png" />
+    <Content Include="Content\wp-content\themes\dairy-farm\images\sticky.png" />
+    <Content Include="Content\wp-content\themes\dairy-farm\images\texture_center.png" />
+    <Content Include="Content\wp-content\themes\dairy-farm\images\texture_slider.png" />
+    <Content Include="Content\wp-content\themes\dairy-farm\images\texture_top.png" />
+    <Content Include="Content\wp-content\themes\dairy-farm\images\woo\shop-cat-bg-1.jpg" />
+    <Content Include="Content\wp-content\themes\dairy-farm\images\woo\shop-cat-bg-2.jpg" />
+    <Content Include="Content\wp-content\themes\dairy-farm\images\woo\shop-cat-bg-3.jpg" />
+    <Content Include="Content\wp-content\themes\dairy-farm\images\woo\shop-cat-bg-4.jpg" />
+    <Content Include="Content\wp-content\themes\dairy-farm\images\woo\shop-cat-bg-5.jpg" />
+    <Content Include="Content\wp-content\themes\dairy-farm\images\woo\shop-cat-bg-6.jpg" />
+    <Content Include="Content\wp-content\themes\dairy-farm\js\theme.init.js" />
+    <Content Include="Content\wp-content\themes\dairy-farm\style.css" />
+    <Content Include="Content\wp-content\uploads\2016\09\1-1.png" />
+    <Content Include="Content\wp-content\uploads\2016\09\2-1.png" />
+    <Content Include="Content\wp-content\uploads\2016\09\3-1.png" />
+    <Content Include="Content\wp-content\uploads\2016\09\3-layers.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\4-1.png" />
+    <Content Include="Content\wp-content\uploads\2016\09\5-1.png" />
+    <Content Include="Content\wp-content\uploads\2016\09\bg_fresh.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\big-cow.png" />
+    <Content Include="Content\wp-content\uploads\2016\09\big_bg.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\big_cow.png" />
+    <Content Include="Content\wp-content\uploads\2016\09\call_to_action.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\cheese.png" />
+    <Content Include="Content\wp-content\uploads\2016\09\cow_little.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\footer-logo.png" />
+    <Content Include="Content\wp-content\uploads\2016\09\girl.png" />
+    <Content Include="Content\wp-content\uploads\2016\09\image1_1.png" />
+    <Content Include="Content\wp-content\uploads\2016\09\img_butter.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\img_cheese.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\img_cream.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\img_milk.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\intro1.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\intro2.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\layer-42.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\layer-43.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\logo.png" />
+    <Content Include="Content\wp-content\uploads\2016\09\milk.png" />
+    <Content Include="Content\wp-content\uploads\2016\09\oil.png" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-1-1170x659.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-1-370x271.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-1-770x434.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-1.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-10-1170x659.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-10-370x359.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-10-770x434.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-10.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-11-1170x659.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-11-370x268.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-11-770x434.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-11.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-12-1170x659.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-12-370x247.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-12-770x434.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-12.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-2-1170x659.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-2-370x204.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-2-770x433.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-2-770x434.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-2.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-3-1170x659.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-3-370x247.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-3-770x434.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-3.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-4-1170x659.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-4-370x290.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-4-370x300.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-4-770x434.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-4.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-5-1170x659.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-5-370x300.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-5-770x434.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-5.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-6-1024x859.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-6-1170x659.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-6-300x252.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-6-370x300.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-6-600x503.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-6-768x644.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-6-770x434.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-6.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-7-1170x659.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-7-370x291.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-7-770x434.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-7.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-8-1170x659.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-8-370x260.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-8-770x434.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-8.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-9-1170x659.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-9-370x305.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-9-770x434.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\post-9.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\price1.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\price2.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\price3.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-1-100x100.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-1-150x150.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-1-300x300.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-1-500x500.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-1.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-2-100x100.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-2-150x150.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-2-300x300.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-2-500x500.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-2-600x600.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-2-768x768.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-2.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-3-100x100.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-3-150x150.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-3-300x300.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-3-500x500.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-3-600x600.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-3-768x768.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-3.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-4-100x100.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-4-150x150.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-4-300x300.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-4-500x500.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-4-600x600.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-4-768x768.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-4.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-5-100x100.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-5-150x150.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-5-300x300.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-5-500x500.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-5-600x600.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-5-768x768.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-5.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-6-100x100.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-6-150x150.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-6-300x300.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-6-500x500.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-6-600x599.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-6-768x767.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-6.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-7-100x100.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-7-150x150.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-7-300x300.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-7-500x500.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-7-600x600.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-7-768x768.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-7.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-8-100x100.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-8-150x150.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-8-300x300.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-8-500x500.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-8-600x601.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-8-768x769.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-8.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-9-100x100.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-9-150x150.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-9-300x300.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-9-500x500.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-9-600x600.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-9-768x768.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\product-9.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-1-1024x855.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-1-1170x659.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-1-300x251.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-1-370x300.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-1-600x501.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-1-768x641.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-1.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-2-1024x858.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-2-1170x659.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-2-300x252.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-2-370x300.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-2-600x503.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-2-768x644.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-2.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-3-1024x875.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-3-1170x659.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-3-300x256.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-3-370x300.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-3-600x513.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-3-768x656.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-3.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-4-1024x846.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-4-1170x659.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-4-300x248.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-4-370x300.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-4-600x496.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-4-768x634.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-4.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-5-1024x854.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-5-1170x659.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-5-300x250.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-5-370x300.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-5-600x500.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-5-768x640.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-5.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-6-1024x910.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-6-1170x659.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-6-300x267.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-6-370x300.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-6-600x533.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-6-768x682.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-6.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-7-1024x845.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-7-1170x659.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-7-300x248.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-7-370x300.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-7-600x495.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-7-768x634.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-7.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-8-1024x895.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-8-1170x659.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-8-300x262.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-8-370x300.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-8-600x524.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-8-768x671.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\recipe-8.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\sample-melody.mp3" />
+    <Content Include="Content\wp-content\uploads\2016\09\service1.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\service2.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\service3.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\team-1-370x370.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\team-1-770x434.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\team-1.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\team-2-370x370.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\team-2-770x434.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\team-2.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\team-3-370x370.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\team-3-770x434.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\team-3.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\team-4-370x370.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\team-4-770x434.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\team-4.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\title_bg.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\video.jpg" />
+    <Content Include="Content\wp-content\uploads\2016\09\yellow_bg.jpg" />
+    <Content Include="Content\wp-includes\css\dist\block-library\style.min.css" />
+    <Content Include="Content\wp-includes\js\comment-reply.min.js" />
+    <Content Include="Content\wp-includes\js\dist\vendor\regenerator-runtime.min.js" />
+    <Content Include="Content\wp-includes\js\dist\vendor\wp-polyfill.min.js" />
+    <Content Include="Content\wp-includes\js\jquery\jquery-migrate.min.js" />
+    <Content Include="Content\wp-includes\js\jquery\jquery.min.js" />
+    <Content Include="Content\wp-includes\js\jquery\ui\core.min.js" />
+    <Content Include="Content\wp-includes\js\jquery\ui\datepicker.min.js" />
+    <Content Include="Content\wp-includes\js\jquery\ui\effect-fade.min.js" />
+    <Content Include="Content\wp-includes\js\jquery\ui\effect.min.js" />
+    <Content Include="Content\wp-includes\js\jquery\ui\mouse.min.js" />
+    <Content Include="Content\wp-includes\js\jquery\ui\slider.min.js" />
+    <Content Include="Content\wp-includes\js\jquery\ui\tabs.min.js" />
+    <Content Include="Content\wp-includes\js\mediaelement\mediaelement-and-player.min.js" />
+    <Content Include="Content\wp-includes\js\mediaelement\mediaelement-migrate.min.js" />
+    <Content Include="Content\wp-includes\js\mediaelement\mediaelementplayer-legacy.min.css" />
+    <Content Include="Content\wp-includes\js\mediaelement\mejs-controls.svg" />
+    <Content Include="Content\wp-includes\js\mediaelement\wp-mediaelement.min.css" />
+    <Content Include="Content\wp-includes\js\mediaelement\wp-mediaelement.min.js" />
+    <Content Include="Content\wp-includes\js\underscore.min.js" />
+    <Content Include="Content\wp-includes\js\wp-util.min.js" />
+    <Content Include="Content\wp-includes\wlwmanifest.xml" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="Content\wp-content\plugins\essential-grid\public\assets\font\fontello\fonts\egfont.eot" />
+    <Content Include="Content\wp-content\plugins\essential-grid\public\assets\font\fontello\fonts\egfont.ttf" />
+    <Content Include="Content\wp-content\plugins\essential-grid\public\assets\font\fontello\fonts\egfont.woff" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\fonts\vc_grid\vc_grid_v1-1.eot" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\fonts\vc_grid\vc_grid_v1.eot" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\fonts\vc_grid\vc_grid_v1.ttf" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\fonts\vc_grid\vc_grid_v1.woff" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\fonts\vc_icons_v2\fonts\vcpb-plugin-icons.eot" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\fonts\vc_icons_v2\fonts\vcpb-plugin-icons.ttf" />
+    <Content Include="Content\wp-content\plugins\js_composer\assets\fonts\vc_icons_v2\fonts\vcpb-plugin-icons.woff" />
+    <Content Include="Content\wp-content\plugins\revslider\public\assets\fonts\revicons\revicons.eot" />
+    <Content Include="Content\wp-content\plugins\revslider\public\assets\fonts\revicons\revicons.ttf" />
+    <Content Include="Content\wp-content\plugins\revslider\public\assets\fonts\revicons\revicons.woff" />
+    <Content Include="Content\wp-content\plugins\trx_demo-master\css\font-icons\font\trx_demo_icons.eot" />
+    <Content Include="Content\wp-content\plugins\trx_demo-master\css\font-icons\font\trx_demo_icons.ttf" />
+    <Content Include="Content\wp-content\plugins\trx_demo-master\css\font-icons\font\trx_demo_icons.woff" />
+    <Content Include="Content\wp-content\plugins\trx_demo-master\css\font-icons\font\trx_demo_icons.woff2" />
+    <Content Include="Content\wp-content\plugins\woocommerce\assets\fonts\star-1.eot" />
+    <Content Include="Content\wp-content\plugins\woocommerce\assets\fonts\star.eot" />
+    <Content Include="Content\wp-content\plugins\woocommerce\assets\fonts\star.ttf" />
+    <Content Include="Content\wp-content\plugins\woocommerce\assets\fonts\star.woff" />
+    <Content Include="Content\wp-content\plugins\woocommerce\assets\fonts\WooCommerce-1.eot" />
+    <Content Include="Content\wp-content\plugins\woocommerce\assets\fonts\WooCommerce.eot" />
+    <Content Include="Content\wp-content\plugins\woocommerce\assets\fonts\WooCommerce.ttf" />
+    <Content Include="Content\wp-content\plugins\woocommerce\assets\fonts\WooCommerce.woff" />
+    <Content Include="Content\wp-content\themes\dairy-farm\css\fontello\font\fontello.eot" />
+    <Content Include="Content\wp-content\themes\dairy-farm\css\fontello\font\fontello.ttf" />
+    <Content Include="Content\wp-content\themes\dairy-farm\css\fontello\font\fontello.woff" />
+    <Content Include="Content\wp-content\themes\dairy-farm\css\fontello\font\fontello.woff2" />
+    <Content Include="Areas\Admin\Views\web.config" />
+    <Content Include="Areas\Admin\Views\Admin\Dashboard.cshtml" />
+    <Content Include="Areas\Admin\assets\fonts\Ubuntu\Ubuntu-Bold.eot" />
+    <Content Include="Areas\Admin\assets\fonts\Ubuntu\Ubuntu-Bold.ttf" />
+    <Content Include="Areas\Admin\assets\fonts\Ubuntu\Ubuntu-Bold.woff" />
+    <Content Include="Areas\Admin\assets\fonts\Ubuntu\Ubuntu-Bold.woff2" />
+    <Content Include="Areas\Admin\assets\fonts\Ubuntu\Ubuntu-Light.eot" />
+    <Content Include="Areas\Admin\assets\fonts\Ubuntu\Ubuntu-Light.ttf" />
+    <Content Include="Areas\Admin\assets\fonts\Ubuntu\Ubuntu-Light.woff" />
+    <Content Include="Areas\Admin\assets\fonts\Ubuntu\Ubuntu-Light.woff2" />
+    <Content Include="Areas\Admin\assets\fonts\Ubuntu\Ubuntu-Medium.eot" />
+    <Content Include="Areas\Admin\assets\fonts\Ubuntu\Ubuntu-Medium.ttf" />
+    <Content Include="Areas\Admin\assets\fonts\Ubuntu\Ubuntu-Medium.woff" />
+    <Content Include="Areas\Admin\assets\fonts\Ubuntu\Ubuntu-Medium.woff2" />
+    <Content Include="Areas\Admin\assets\fonts\Ubuntu\Ubuntu-Regular.eot" />
+    <Content Include="Areas\Admin\assets\fonts\Ubuntu\Ubuntu-Regular.ttf" />
+    <Content Include="Areas\Admin\assets\fonts\Ubuntu\Ubuntu-Regular.woff" />
+    <Content Include="Areas\Admin\assets\fonts\Ubuntu\Ubuntu-Regular.woff2" />
+    <Content Include="Areas\Admin\assets\vendors\mdi\fonts\materialdesignicons-webfont61e3.eot" />
+    <Content Include="Areas\Admin\assets\vendors\mdi\fonts\materialdesignicons-webfont61e3.ttf" />
+    <Content Include="Areas\Admin\assets\vendors\mdi\fonts\materialdesignicons-webfont61e3.woff" />
+    <Content Include="Areas\Admin\assets\vendors\mdi\fonts\materialdesignicons-webfont61e3.woff2" />
+    <Content Include="Areas\Admin\assets\vendors\mdi\fonts\materialdesignicons-webfontd41d.eot" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\HomePage.cshtml" />
+    <Content Include="Views\Login\Login.cshtml" />
+    <Content Include="Views\Shared\_GenerelLayout.cshtml" />
+    <Content Include="Views\Home\AboutUs.cshtml" />
+    <Content Include="Views\Home\ContactUs.cshtml" />
+    <Content Include="Views\Home\Farm.cshtml" />
+    <Content Include="Views\Home\Product.cshtml" />
+    <Content Include="Views\Shared\_Header.cshtml" />
+    <Content Include="Views\Shared\_Footer.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Areas\Admin\Models\" />
+    <Folder Include="Areas\Admin\Views\Shared\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>57858</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44344/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
