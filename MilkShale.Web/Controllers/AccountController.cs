@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace MilkShale.Controllers
 {
-    public class LoginController : Controller
+    public class AccountController : Controller
     {
         // GET: Login
         public ActionResult Login()

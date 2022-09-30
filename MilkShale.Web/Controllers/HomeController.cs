@@ -25,10 +25,7 @@ namespace MilkShale.Controllers
             return View();
         }
 
-        public ActionResult Farm()
-        {
-            return View();
-        }
+       
         public ActionResult Product()
         {
             return View();
