@@ -1,0 +1,560 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="MilkSaleDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'MilkSaleDB.dbo.District' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="District">
+          <Property Name="DistrictId" Type="int" />
+          <Property Name="DistrictName" Type="nvarchar" MaxLength="50" />
+          <Property Name="StateId" Type="int" />
+          <Property Name="Active" Type="bit" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+        </EntityType>-->
+        <EntityType Name="LoginUser">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="bigint" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="SessionId" Type="nvarchar(max)" />
+          <Property Name="IsLogin" Type="bit" Nullable="false" />
+          <Property Name="PageName" Type="nvarchar" MaxLength="300" />
+          <Property Name="LastActivityOn" Type="datetime" />
+        </EntityType>
+        <EntityType Name="PasswordResetLinkForUser">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="LinkSentOn" Type="datetime" Nullable="false" />
+          <Property Name="IsPasswordReset" Type="bit" Nullable="false" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6013: The table/view 'MilkSaleDB.dbo.State' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="State">
+          <Property Name="StateId" Type="int" />
+          <Property Name="StateName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Active" Type="bit" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+        </EntityType>-->
+        <EntityType Name="TimeZoneList">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="name" Type="nvarchar" MaxLength="128" Nullable="false" />
+          <Property Name="current_utc_offset" Type="nvarchar" MaxLength="6" Nullable="false" />
+          <Property Name="is_currently_dst" Type="bit" Nullable="false" />
+          <Property Name="ZoneId" Type="nvarchar" MaxLength="4" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="SaltKey" Type="nvarchar" MaxLength="100" />
+          <Property Name="UserRoleId" Type="int" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="100" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="100" />
+          <Property Name="Email" Type="nvarchar" MaxLength="100" />
+          <Property Name="Mobile" Type="nvarchar" MaxLength="50" />
+          <Property Name="Password" Type="nvarchar" MaxLength="100" />
+          <Property Name="ProfileImage" Type="nvarchar(max)" />
+          <Property Name="IpAddress" Type="nvarchar" MaxLength="20" />
+          <Property Name="IsActive" Type="bit" />
+          <Property Name="IsVerified" Type="bit" />
+          <Property Name="CreatedDate" Type="datetime" />
+          <Property Name="ModifiedDate" Type="datetime" />
+          <Property Name="UserType" Type="int" Nullable="false" />
+          <Property Name="CountryCode" Type="nvarchar" MaxLength="10" />
+          <Property Name="ContinueFailedLogin" Type="int" />
+          <Property Name="LastPasswordChangedOn" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserModulePermission">
+          <Key>
+            <PropertyRef Name="UserModulePermissionId" />
+          </Key>
+          <Property Name="UserModulePermissionId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="RoleId" Type="int" Nullable="false" />
+          <Property Name="UserModuleId" Type="int" Nullable="false" />
+          <Property Name="CreatedOn" Type="datetime" Nullable="false" />
+          <Property Name="UpdatedOn" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserRole">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="RoleId" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Name" Type="nvarchar" MaxLength="100" Nullable="false" />
+          <Property Name="CreateDate" Type="datetime" Nullable="false" />
+        </EntityType>
+        <EntityType Name="UserSubscription">
+          <Key>
+            <PropertyRef Name="UserSubscriptionId" />
+          </Key>
+          <Property Name="UserSubscriptionId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="OrderId" Type="uniqueidentifier" />
+          <Property Name="IsCurrent" Type="bit" />
+          <Property Name="UserId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="PlanStartDate" Type="datetime" Nullable="false" />
+          <Property Name="PlanEndDate" Type="datetime" />
+          <Property Name="PlanDurationType" Type="int" />
+          <Property Name="PlanTypeName" Type="nvarchar" MaxLength="300" />
+          <Property Name="PlanReferenceId" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CreatedBy" Type="uniqueidentifier" Nullable="false" />
+          <Property Name="CreateadOn" Type="datetime" Nullable="false" />
+          <Property Name="PlanDuration" Type="int" />
+          <Property Name="PlanName" Type="nvarchar" MaxLength="500" />
+        </EntityType>
+        <Association Name="FK_LoginUser_User">
+          <End Role="User" Type="Self.User" Multiplicity="1" />
+          <End Role="LoginUser" Type="Self.LoginUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="LoginUser">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PasswordResetLinkForUser_User">
+          <End Role="User" Type="Self.User" Multiplicity="1" />
+          <End Role="PasswordResetLinkForUser" Type="Self.PasswordResetLinkForUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="PasswordResetLinkForUser">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Subscription_User">
+          <End Role="User" Type="Self.User" Multiplicity="1" />
+          <End Role="UserSubscription" Type="Self.UserSubscription" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="UserSubscription">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserModulePermission_User">
+          <End Role="User" Type="Self.User" Multiplicity="1" />
+          <End Role="UserModulePermission" Type="Self.UserModulePermission" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="UserModulePermission">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserModulePermission_UserRole">
+          <End Role="UserRole" Type="Self.UserRole" Multiplicity="1" />
+          <End Role="UserModulePermission" Type="Self.UserModulePermission" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserRole">
+              <PropertyRef Name="RoleId" />
+            </Principal>
+            <Dependent Role="UserModulePermission">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserRole_User">
+          <End Role="UserRole" Type="Self.UserRole" Multiplicity="0..1" />
+          <End Role="User" Type="Self.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserRole">
+              <PropertyRef Name="RoleId" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="UserRoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MilkSaleDBModelStoreContainer">
+          <EntitySet Name="LoginUser" EntityType="Self.LoginUser" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="PasswordResetLinkForUser" EntityType="Self.PasswordResetLinkForUser" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="TimeZoneList" EntityType="Self.TimeZoneList" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserModulePermission" EntityType="Self.UserModulePermission" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserRole" EntityType="Self.UserRole" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="UserSubscription" EntityType="Self.UserSubscription" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_LoginUser_User" Association="Self.FK_LoginUser_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="LoginUser" EntitySet="LoginUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PasswordResetLinkForUser_User" Association="Self.FK_PasswordResetLinkForUser_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="PasswordResetLinkForUser" EntitySet="PasswordResetLinkForUser" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Subscription_User" Association="Self.FK_Subscription_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="UserSubscription" EntitySet="UserSubscription" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserModulePermission_User" Association="Self.FK_UserModulePermission_User">
+            <End Role="User" EntitySet="User" />
+            <End Role="UserModulePermission" EntitySet="UserModulePermission" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserModulePermission_UserRole" Association="Self.FK_UserModulePermission_UserRole">
+            <End Role="UserRole" EntitySet="UserRole" />
+            <End Role="UserModulePermission" EntitySet="UserModulePermission" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserRole_User" Association="Self.FK_UserRole_User">
+            <End Role="UserRole" EntitySet="UserRole" />
+            <End Role="User" EntitySet="User" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="MilkSaleDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="LoginUser">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int64" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="Guid" Nullable="false" />
+          <Property Name="SessionId" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IsLogin" Type="Boolean" Nullable="false" />
+          <Property Name="PageName" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="LastActivityOn" Type="DateTime" Precision="3" />
+          <NavigationProperty Name="User" Relationship="Self.FK_LoginUser_User" FromRole="LoginUser" ToRole="User" />
+        </EntityType>
+        <EntityType Name="PasswordResetLinkForUser">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="Guid" Nullable="false" />
+          <Property Name="LinkSentOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="IsPasswordReset" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="User" Relationship="Self.FK_PasswordResetLinkForUser_User" FromRole="PasswordResetLinkForUser" ToRole="User" />
+        </EntityType>
+        <EntityType Name="TimeZoneList">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="current_utc_offset" Type="String" MaxLength="6" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="is_currently_dst" Type="Boolean" Nullable="false" />
+          <Property Name="ZoneId" Type="String" MaxLength="4" FixedLength="false" Unicode="true" />
+        </EntityType>
+        <EntityType Name="User">
+          <Key>
+            <PropertyRef Name="UserId" />
+          </Key>
+          <Property Name="UserId" Type="Guid" Nullable="false" />
+          <Property Name="SaltKey" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="UserRoleId" Type="Int32" />
+          <Property Name="FirstName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="Mobile" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Password" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+          <Property Name="ProfileImage" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+          <Property Name="IpAddress" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
+          <Property Name="IsActive" Type="Boolean" />
+          <Property Name="IsVerified" Type="Boolean" />
+          <Property Name="CreatedDate" Type="DateTime" Precision="3" />
+          <Property Name="ModifiedDate" Type="DateTime" Precision="3" />
+          <Property Name="UserType" Type="Int32" Nullable="false" />
+          <Property Name="CountryCode" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="ContinueFailedLogin" Type="Int32" />
+          <Property Name="LastPasswordChangedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="LoginUsers" Relationship="Self.FK_LoginUser_User" FromRole="User" ToRole="LoginUser" />
+          <NavigationProperty Name="PasswordResetLinkForUsers" Relationship="Self.FK_PasswordResetLinkForUser_User" FromRole="User" ToRole="PasswordResetLinkForUser" />
+          <NavigationProperty Name="UserSubscriptions" Relationship="Self.FK_Subscription_User" FromRole="User" ToRole="UserSubscription" />
+          <NavigationProperty Name="UserModulePermissions" Relationship="Self.FK_UserModulePermission_User" FromRole="User" ToRole="UserModulePermission" />
+          <NavigationProperty Name="UserRole" Relationship="Self.FK_UserRole_User" FromRole="User" ToRole="UserRole" />
+        </EntityType>
+        <EntityType Name="UserModulePermission">
+          <Key>
+            <PropertyRef Name="UserModulePermissionId" />
+          </Key>
+          <Property Name="UserModulePermissionId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="UserId" Type="Guid" Nullable="false" />
+          <Property Name="RoleId" Type="Int32" Nullable="false" />
+          <Property Name="UserModuleId" Type="Int32" Nullable="false" />
+          <Property Name="CreatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="UpdatedOn" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="User" Relationship="Self.FK_UserModulePermission_User" FromRole="UserModulePermission" ToRole="User" />
+          <NavigationProperty Name="UserRole" Relationship="Self.FK_UserModulePermission_UserRole" FromRole="UserModulePermission" ToRole="UserRole" />
+        </EntityType>
+        <EntityType Name="UserRole">
+          <Key>
+            <PropertyRef Name="RoleId" />
+          </Key>
+          <Property Name="RoleId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="CreateDate" Type="DateTime" Nullable="false" Precision="3" />
+          <NavigationProperty Name="Users" Relationship="Self.FK_UserRole_User" FromRole="UserRole" ToRole="User" />
+          <NavigationProperty Name="UserModulePermissions" Relationship="Self.FK_UserModulePermission_UserRole" FromRole="UserRole" ToRole="UserModulePermission" />
+        </EntityType>
+        <EntityType Name="UserSubscription">
+          <Key>
+            <PropertyRef Name="UserSubscriptionId" />
+          </Key>
+          <Property Name="UserSubscriptionId" Type="Guid" Nullable="false" />
+          <Property Name="OrderId" Type="Guid" />
+          <Property Name="IsCurrent" Type="Boolean" />
+          <Property Name="UserId" Type="Guid" Nullable="false" />
+          <Property Name="PlanStartDate" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PlanEndDate" Type="DateTime" Precision="3" />
+          <Property Name="PlanDurationType" Type="Int32" />
+          <Property Name="PlanTypeName" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+          <Property Name="PlanReferenceId" Type="Guid" Nullable="false" />
+          <Property Name="CreatedBy" Type="Guid" Nullable="false" />
+          <Property Name="CreateadOn" Type="DateTime" Nullable="false" Precision="3" />
+          <Property Name="PlanDuration" Type="Int32" />
+          <Property Name="PlanName" Type="String" MaxLength="500" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="User" Relationship="Self.FK_Subscription_User" FromRole="UserSubscription" ToRole="User" />
+        </EntityType>
+        <Association Name="FK_LoginUser_User">
+          <End Role="User" Type="Self.User" Multiplicity="1" />
+          <End Role="LoginUser" Type="Self.LoginUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="LoginUser">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_PasswordResetLinkForUser_User">
+          <End Role="User" Type="Self.User" Multiplicity="1" />
+          <End Role="PasswordResetLinkForUser" Type="Self.PasswordResetLinkForUser" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="PasswordResetLinkForUser">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_Subscription_User">
+          <End Role="User" Type="Self.User" Multiplicity="1" />
+          <End Role="UserSubscription" Type="Self.UserSubscription" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="UserSubscription">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserModulePermission_User">
+          <End Role="User" Type="Self.User" Multiplicity="1" />
+          <End Role="UserModulePermission" Type="Self.UserModulePermission" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="User">
+              <PropertyRef Name="UserId" />
+            </Principal>
+            <Dependent Role="UserModulePermission">
+              <PropertyRef Name="UserId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserRole_User">
+          <End Role="UserRole" Type="Self.UserRole" Multiplicity="0..1" />
+          <End Role="User" Type="Self.User" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserRole">
+              <PropertyRef Name="RoleId" />
+            </Principal>
+            <Dependent Role="User">
+              <PropertyRef Name="UserRoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_UserModulePermission_UserRole">
+          <End Role="UserRole" Type="Self.UserRole" Multiplicity="1" />
+          <End Role="UserModulePermission" Type="Self.UserModulePermission" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="UserRole">
+              <PropertyRef Name="RoleId" />
+            </Principal>
+            <Dependent Role="UserModulePermission">
+              <PropertyRef Name="RoleId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="MilkSaleDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="LoginUsers" EntityType="Self.LoginUser" />
+          <EntitySet Name="PasswordResetLinkForUsers" EntityType="Self.PasswordResetLinkForUser" />
+          <EntitySet Name="TimeZoneLists" EntityType="Self.TimeZoneList" />
+          <EntitySet Name="Users" EntityType="Self.User" />
+          <EntitySet Name="UserModulePermissions" EntityType="Self.UserModulePermission" />
+          <EntitySet Name="UserRoles" EntityType="Self.UserRole" />
+          <EntitySet Name="UserSubscriptions" EntityType="Self.UserSubscription" />
+          <AssociationSet Name="FK_LoginUser_User" Association="Self.FK_LoginUser_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="LoginUser" EntitySet="LoginUsers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_PasswordResetLinkForUser_User" Association="Self.FK_PasswordResetLinkForUser_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="PasswordResetLinkForUser" EntitySet="PasswordResetLinkForUsers" />
+          </AssociationSet>
+          <AssociationSet Name="FK_Subscription_User" Association="Self.FK_Subscription_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="UserSubscription" EntitySet="UserSubscriptions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserModulePermission_User" Association="Self.FK_UserModulePermission_User">
+            <End Role="User" EntitySet="Users" />
+            <End Role="UserModulePermission" EntitySet="UserModulePermissions" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserRole_User" Association="Self.FK_UserRole_User">
+            <End Role="UserRole" EntitySet="UserRoles" />
+            <End Role="User" EntitySet="Users" />
+          </AssociationSet>
+          <AssociationSet Name="FK_UserModulePermission_UserRole" Association="Self.FK_UserModulePermission_UserRole">
+            <End Role="UserRole" EntitySet="UserRoles" />
+            <End Role="UserModulePermission" EntitySet="UserModulePermissions" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="MilkSaleDBModelStoreContainer" CdmEntityContainer="MilkSaleDBEntities">
+          <EntitySetMapping Name="LoginUsers">
+            <EntityTypeMapping TypeName="MilkSaleDBModel.LoginUser">
+              <MappingFragment StoreEntitySet="LoginUser">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="SessionId" ColumnName="SessionId" />
+                <ScalarProperty Name="IsLogin" ColumnName="IsLogin" />
+                <ScalarProperty Name="PageName" ColumnName="PageName" />
+                <ScalarProperty Name="LastActivityOn" ColumnName="LastActivityOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="PasswordResetLinkForUsers">
+            <EntityTypeMapping TypeName="MilkSaleDBModel.PasswordResetLinkForUser">
+              <MappingFragment StoreEntitySet="PasswordResetLinkForUser">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="LinkSentOn" ColumnName="LinkSentOn" />
+                <ScalarProperty Name="IsPasswordReset" ColumnName="IsPasswordReset" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="TimeZoneLists">
+            <EntityTypeMapping TypeName="MilkSaleDBModel.TimeZoneList">
+              <MappingFragment StoreEntitySet="TimeZoneList">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="current_utc_offset" ColumnName="current_utc_offset" />
+                <ScalarProperty Name="is_currently_dst" ColumnName="is_currently_dst" />
+                <ScalarProperty Name="ZoneId" ColumnName="ZoneId" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Users">
+            <EntityTypeMapping TypeName="MilkSaleDBModel.User">
+              <MappingFragment StoreEntitySet="User">
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="SaltKey" ColumnName="SaltKey" />
+                <ScalarProperty Name="UserRoleId" ColumnName="UserRoleId" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="ProfileImage" ColumnName="ProfileImage" />
+                <ScalarProperty Name="IpAddress" ColumnName="IpAddress" />
+                <ScalarProperty Name="IsActive" ColumnName="IsActive" />
+                <ScalarProperty Name="IsVerified" ColumnName="IsVerified" />
+                <ScalarProperty Name="CreatedDate" ColumnName="CreatedDate" />
+                <ScalarProperty Name="ModifiedDate" ColumnName="ModifiedDate" />
+                <ScalarProperty Name="UserType" ColumnName="UserType" />
+                <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+                <ScalarProperty Name="ContinueFailedLogin" ColumnName="ContinueFailedLogin" />
+                <ScalarProperty Name="LastPasswordChangedOn" ColumnName="LastPasswordChangedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserModulePermissions">
+            <EntityTypeMapping TypeName="MilkSaleDBModel.UserModulePermission">
+              <MappingFragment StoreEntitySet="UserModulePermission">
+                <ScalarProperty Name="UserModulePermissionId" ColumnName="UserModulePermissionId" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="UserModuleId" ColumnName="UserModuleId" />
+                <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+                <ScalarProperty Name="UpdatedOn" ColumnName="UpdatedOn" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserRoles">
+            <EntityTypeMapping TypeName="MilkSaleDBModel.UserRole">
+              <MappingFragment StoreEntitySet="UserRole">
+                <ScalarProperty Name="RoleId" ColumnName="RoleId" />
+                <ScalarProperty Name="Name" ColumnName="Name" />
+                <ScalarProperty Name="CreateDate" ColumnName="CreateDate" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="UserSubscriptions">
+            <EntityTypeMapping TypeName="MilkSaleDBModel.UserSubscription">
+              <MappingFragment StoreEntitySet="UserSubscription">
+                <ScalarProperty Name="UserSubscriptionId" ColumnName="UserSubscriptionId" />
+                <ScalarProperty Name="OrderId" ColumnName="OrderId" />
+                <ScalarProperty Name="IsCurrent" ColumnName="IsCurrent" />
+                <ScalarProperty Name="UserId" ColumnName="UserId" />
+                <ScalarProperty Name="PlanStartDate" ColumnName="PlanStartDate" />
+                <ScalarProperty Name="PlanEndDate" ColumnName="PlanEndDate" />
+                <ScalarProperty Name="PlanDurationType" ColumnName="PlanDurationType" />
+                <ScalarProperty Name="PlanTypeName" ColumnName="PlanTypeName" />
+                <ScalarProperty Name="PlanReferenceId" ColumnName="PlanReferenceId" />
+                <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+                <ScalarProperty Name="CreateadOn" ColumnName="CreateadOn" />
+                <ScalarProperty Name="PlanDuration" ColumnName="PlanDuration" />
+                <ScalarProperty Name="PlanName" ColumnName="PlanName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
