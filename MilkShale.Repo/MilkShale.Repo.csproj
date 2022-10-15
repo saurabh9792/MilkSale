@@ -166,7 +166,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Enums.cs" />
+    <Compile Include="IRepository.cs" />
+    <Compile Include="IUnitOfWork.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository.cs" />
+    <Compile Include="RepositoryQuery.cs" />
+    <Compile Include="Search\PagedListResult.cs" />
+    <Compile Include="Search\SearchQuery.cs" />
+    <Compile Include="Sort\ExpressionSortCriteria.cs" />
+    <Compile Include="Sort\FieldSortOrder.cs" />
+    <Compile Include="Sort\ISortCriteria.cs" />
+    <Compile Include="Sort\QueryExtensions.cs" />
+    <Compile Include="UnitOfWork.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MilkShale.DataTable\MilkShale.DataTable.csproj">
@@ -182,6 +194,7 @@
     <None Include="App.config" />
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

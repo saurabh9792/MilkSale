@@ -13,5 +13,11 @@ namespace MilkShale.Controllers
         {
             return View();
         }
+
+
+        public ActionResult UserRegistration()
+        {
+            return View();
+        }
     }
 }
